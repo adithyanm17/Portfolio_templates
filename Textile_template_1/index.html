@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weaver's Knot - Fine Textiles</title>
+    <meta name="description" content="Discover exquisite handcrafted textiles at The Weaver's Knot. Premium fabrics, unique designs, and sustainable materials for your home and wardrobe.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/6c5ce7/weaving-looms.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1542664337-045b2557161b?auto=format&fit=crop&q=80">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="navbar-brand">The Weaver's Knot</a>
+            <div class="nav-links">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#collections">Collections</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-sm">Get a Quote</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content animate-on-scroll">
+                <h1>Woven with Passion,<br>Designed for You.</h1>
+                <p>Discover a world of exquisite fabrics and timeless textures, crafted with care and tradition.</p>
+                <div class="hero-buttons">
+                    <a href="#collections" class="btn btn-primary">Explore Collections</a>
+                    <a href="#about" class="btn btn-outline">Our Story</a>
+                </div>
+            </div>
+            
+            <!-- Scroll Down Indicator -->
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <i class="bi bi-arrow-down"></i>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="#" aria-label="Instagram" class="social-link"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Pinterest" class="social-link"><i class="bi bi-pinterest"></i></a>
+                <a href="#" aria-label="Facebook" class="social-link"><i class="bi bi-facebook"></i></a>
+            </div>
+        </section>
+        
+        <!-- Collections Section -->
+        <section id="collections" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Our Work</span>
+                    <h2>Explore Our Gallery</h2>
+                    <p class="section-description">Discover our curated collection of handcrafted textiles, each piece telling its own unique story.</p>
+                </div>
+                
+                <div class="masonry-gallery">
+                    <figure class="gallery-item animate-on-scroll tall">
+                        <img src="https://images.unsplash.com/photo-1593411824535-7c507c57a7b2?auto=format&fit=crop&q=80" alt="Colorful embroidered fabric" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Floral Embroidery</h3>
+                            <p>Hand-stitched with care</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="gallery-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1616429326462-8e65a03b5f79?auto=format&fit=crop&q=80" alt="Neutral linen fabric" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Organic Linen</h3>
+                            <p>Eco-friendly & sustainable</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="gallery-item animate-on-scroll wide">
+                        <img src="https://images.unsplash.com/photo-1544949877-38c204c4b694?auto=format&fit=crop&q=80" alt="Stack of folded fabrics" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Textile Collection</h3>
+                            <p>Premium quality fabrics</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="gallery-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1594943362194-9a99b49b441f?auto=format&fit=crop&q=80" alt="Detailed view of a woven pattern" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Intricate Weaves</h3>
+                            <p>Traditional techniques</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="gallery-item animate-on-scroll tall">
+                        <img src="https://images.unsplash.com/photo-1552320469-80e33285a812?auto=format&fit=crop&q=80" alt="Close up of silk fabric" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Luxury Silk</h3>
+                            <p>Elegant & smooth</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="gallery-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1620722359264-887b3636b42a?auto=format&fit=crop&q=80" alt="Rolls of cotton fabric" loading="lazy">
+                        <figcaption class="gallery-caption">
+                            <h3>Cotton Collection</h3>
+                            <p>Breathable & comfortable</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-outline">Request Custom Order</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container about-container">
+                <div class="about-image animate-on-scroll">
+                    <div class="floating-shape shape-1"></div>
+                    <div class="floating-shape shape-2"></div>
+                </div>
+                
+                <div class="about-text animate-on-scroll">
+                    <span class="subtitle">Our Story</span>
+                    <h2>A Heritage of Thread</h2>
+                    <p>Since 2025, The Weaver's Knot has been a sanctuary for creators, designers, and artisans. Our journey began with a simple love for textiles and a commitment to sourcing the highest quality fabrics from around the globe.</p>
+                    <p>Each piece in our collection is carefully selected for its quality, sustainability, and beauty. We work directly with skilled artisans who use traditional techniques passed down through generations, ensuring that every fabric tells a story of craftsmanship and dedication.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Projects Done</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">Visit Our Shop</a>
+                        <a href="#" class="btn-text">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">What We Offer</span>
+                    <h2>Our Services</h2>
+                    <p class="section-description">Comprehensive textile solutions tailored to your unique needs and vision.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="bi bi-scissors"></i>
+                            <div class="icon-shape"></div>
+                        </div>
+                        <h3>Custom Tailoring</h3>
+                        <p>Bring your vision to life with our expert in-house tailoring and garment creation services. Perfect fits for every body type.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="bi bi-palette-fill"></i>
+                            <div class="icon-shape"></div>
+                        </div>
+                        <h3>Fabric Dyeing</h3>
+                        <p>Create the perfect custom color for your project with our professional, eco-friendly dyeing services.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="bi bi-lightbulb-fill"></i>
+                            <div class="icon-shape"></div>
+                        </div>
+                        <h3>Design Consultation</h3>
+                        <p>Our experienced staff is here to help you select the perfect textiles and designs for your specific needs.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="bi bi-arrow-repeat"></i>
+                            <div class="icon-shape"></div>
+                        </div>
+                        <h3>Textile Restoration</h3>
+                        <p>Preserve and restore your cherished textiles with our expert conservation and repair services.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="cta-banner animate-on-scroll">
+                    <div class="cta-content">
+                        <h3>Ready to Start Your Project?</h3>
+                        <p>Get in touch with us today to discuss your textile needs.</p>
+                    </div>
+                    <a href="#contact" class="btn btn-light">Get a Free Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Get In Touch</span>
+                    <h2>Let's Create Together</h2>
+                    <p class="section-description">Have a project in mind? We'd love to hear about it.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll">
+                        <h3>Visit Our Shop</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 42 Fabric Lane, Bengaluru, KA 560001</p>
+                        
+                        <h3>Contact Us</h3>
+                        <p><i class="bi bi-telephone-fill"></i> +91 98765 12345</p>
+                        <p><i class="bi bi-whatsapp"></i> +91 98765 12346</p>
+                        <p><i class="bi bi-envelope-fill"></i> contact@weaversknot.com</p>
+                        
+                        <h3>Business Hours</h3>
+                        <p><i class="bi bi-clock-fill"></i> Mon - Sat: 10:00 AM - 7:00 PM</p>
+                        <p><i class="bi bi-calendar-x"></i> Sunday: Closed</p>
+                        
+                        <div class="social-links">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                                <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form animate-on-scroll">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Send Message <i class="bi bi-send"></i></button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="contact-map animate-on-scroll">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.006093807463!2d77.59231431534383!3d12.971951590856883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf5df05e9b5a09b6b!2sBangalore%20Fort!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">The Weaver's Knot</a>
+                    <p>Bringing together traditional craftsmanship and contemporary design to create timeless textiles that tell a story.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#collections" class="footer-link">Collections</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Custom Tailoring</a></li>
+                        <li><a href="#" class="footer-link">Fabric Dyeing</a></li>
+                        <li><a href="#" class="footer-link">Design Consultation</a></li>
+                        <li><a href="#" class="footer-link">Textile Restoration</a></li>
+                        <li><a href="#" class="footer-link">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn-submit"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </form>
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card"></i>
+                        <i class="bi bi-paypal"></i>
+                        <i class="bi bi-google-pay"></i>
+                        <i class="bi bi-currency-bitcoin"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright"> 2025 The Weaver's Knot. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Preloader Script -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                    document.body.classList.remove('no-scroll');
+                }, 1000);
+            }
+            
+            // Initialize animations after page load
+            if (typeof initAnimations === 'function') {
+                initAnimations();
+            }
+        });
+        
+        // Scroll progress bar
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            if (scrollProgress) {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight - windowHeight;
+                const scrolled = (window.scrollY / documentHeight) * 100;
+                scrollProgress.style.width = scrolled + '%';
+            }
+        });
+    </script>
+</body>
+</html>
