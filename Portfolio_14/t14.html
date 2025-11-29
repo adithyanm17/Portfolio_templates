@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alisha Verma | Holistic Health Practitioner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+            color: #57534e; /* stone-600 */
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Lora', serif;
+        }
+        
+        /* Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .fade-in-up-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .specialty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(168, 162, 158, 0.2);
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        /* Custom Colors */
+        .bg-brand-green { background-color: #3a6463; }
+        .hover\:bg-brand-green-dark:hover { background-color: #2e504f; }
+        .text-brand-green { color: #3a6463; }
+        .text-brand-green-dark { color: #2e504f; }
+        .border-brand-green { border-color: #3a6463; }
+        .bg-brand-beige { background-color: #fdfaf6; }
+        .bg-brand-beige-light { background-color: #f0ebe5; }
+    </style>
+</head>
+<body class="bg-stone-100">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-beige/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold font-serif text-brand-green-dark">Dr. Alisha Verma</a>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="text-stone-600 hover:text-brand-green transition-colors">About</a>
+                <a href="#specialties" class="text-stone-600 hover:text-brand-green transition-colors">Specialties</a>
+                <a href="#gallery" class="text-stone-600 hover:text-brand-green transition-colors">Clinic Gallery</a>
+                <a href="#contact" class="text-stone-600 hover:text-brand-green transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                 <div class="flex items-center space-x-2">
+                    <i data-feather="phone" class="text-brand-green w-4 h-4"></i>
+                    <a href="tel:+1234567890" class="font-semibold text-stone-700 hover:text-brand-green">+1 (234) 567-890</a>
+                </div>
+                <a href="#contact" class="bg-brand-green text-white font-semibold py-2 px-5 rounded-full hover:bg-brand-green-dark transition-all duration-300 transform hover:scale-105">
+                    Book Appointment
+                </a>
+            </div>
+
+            <button id="mobile-menu-button" class="lg:hidden text-stone-700">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-beige border-t border-stone-200">
+            <a href="#about" class="block py-3 px-6 text-stone-600 hover:bg-stone-100">About</a>
+            <a href="#specialties" class="block py-3 px-6 text-stone-600 hover:bg-stone-100">Specialties</a>
+            <a href="#gallery" class="block py-3 px-6 text-stone-600 hover:bg-stone-100">Clinic Gallery</a>
+            <a href="#contact" class="block py-3 px-6 text-stone-600 hover:bg-stone-100">Contact</a>
+            <div class="p-4 border-t border-stone-200">
+                 <a href="#contact" class="w-full text-center block bg-brand-green text-white font-semibold py-3 px-6 rounded-full hover:bg-brand-green-dark transition-colors">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-20 bg-brand-beige">
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <h1 class="text-4xl md:text-6xl font-serif font-bold text-brand-green-dark leading-tight">
+                        Your Partner in Lasting Health and Wellness.
+                    </h1>
+                    <p class="mt-6 text-lg text-stone-600">
+                        Dr. Alisha Verma offers a personalized, holistic approach to medicine, focusing on root causes to help you achieve vibrant, long-term health.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="#contact" class="bg-brand-green text-white font-semibold py-3 px-8 rounded-full hover:bg-brand-green-dark transition-all duration-300 transform hover:scale-105">Book an Appointment</a>
+                        <a href="#about" class="bg-brand-beige-light text-stone-800 font-semibold py-3 px-8 rounded-full hover:bg-stone-300 transition-colors">Meet Dr. Verma</a>
+                    </div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 200ms;">
+                    <img src="https://placehold.co/600x600/f0ebe5/3a6463?text=Dr.+Alisha+Verma" alt="Dr. Alisha Verma" class="rounded-3xl shadow-2xl shadow-stone-300/60">
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section id="specialties" class="py-24">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-brand-green">Our Approach</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-serif font-bold text-stone-900">Focus Areas for Your Health</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-stone-600">We integrate the best of modern science and timeless natural wisdom to support your body's innate healing capabilities.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Specialty 1 -->
+                    <div class="specialty-card fade-in-up bg-white p-8 rounded-2xl shadow-lg shadow-stone-200/80 transition-all duration-300 text-left">
+                        <div class="bg-green-100 text-green-700 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="zap"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-stone-800 font-serif">Functional Medicine</h3>
+                        <p class="mt-2 text-stone-600">Investigating the root cause of illness and addressing system imbalances to restore health.</p>
+                    </div>
+                    <!-- Specialty 2 -->
+                    <div class="specialty-card fade-in-up bg-white p-8 rounded-2xl shadow-lg shadow-stone-200/80 transition-all duration-300 text-left" style="transition-delay: 150ms;">
+                        <div class="bg-green-100 text-green-700 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="leaf"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-stone-800 font-serif">Nutritional Therapy</h3>
+                        <p class="mt-2 text-stone-600">Using food as medicine with personalized plans to nourish your body and manage conditions.</p>
+                    </div>
+                    <!-- Specialty 3 -->
+                    <div class="specialty-card fade-in-up bg-white p-8 rounded-2xl shadow-lg shadow-stone-200/80 transition-all duration-300 text-left" style="transition-delay: 300ms;">
+                        <div class="bg-green-100 text-green-700 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="heart"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-stone-800 font-serif">Mind-Body Wellness</h3>
+                        <p class="mt-2 text-stone-600">Integrating stress management and mindfulness techniques for comprehensive well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Experience Section -->
+        <section id="about" class="py-24 bg-brand-beige">
+            <div class="container mx-auto px-6 grid lg:grid-cols-5 gap-16 items-center">
+                <div class="lg:col-span-2 fade-in-up">
+                    <img src="https://placehold.co/500x600/f0ebe5/3a6463?text=Professional" alt="Dr. Verma in a professional setting" class="rounded-2xl shadow-xl shadow-stone-300/70 w-full">
+                </div>
+                <div class="lg:col-span-3 fade-in-up" style="transition-delay: 200ms;">
+                     <h2 class="text-sm font-bold uppercase tracking-widest text-brand-green">Meet Dr. Verma</h2>
+                     <p class="mt-4 text-3xl md:text-4xl font-serif font-bold text-stone-900">Dedicated to a New Standard of Care</p>
+                     <p class="mt-6 text-stone-600 leading-relaxed">
+                        With over 12 years of experience, Dr. Alisha Verma is a certified practitioner in both family and functional medicine. After seeing the limitations of a conventional approach, she pursued advanced training to offer patients more comprehensive, personalized, and effective healthcare solutions that look at the whole person, not just the symptoms.
+                     </p>
+                     <div class="mt-8 border-t border-stone-300 pt-8">
+                         <h3 class="font-semibold text-stone-800 font-serif">Credentials & Experience</h3>
+                         <ul class="mt-4 space-y-4">
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-green-600 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Founder, The Wellness Practice</span> (2018 - Present)</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-green-600 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Certified Practitioner, IFM</span> (2017)</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-green-600 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Family Physician, Community Health Clinic</span> (2012 - 2018)</span>
+                            </li>
+                         </ul>
+                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Gallery Section -->
+        <section id="gallery" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-brand-green">The Clinic</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-serif font-bold text-stone-900">A Space Designed for Healing</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-stone-600">Our clinic is designed to be a peaceful retreat, promoting calm and comfort from the moment you arrive.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md">
+                        <img src="https://placehold.co/400x400/f0ebe5/6d8a89?text=Reception" alt="Clinic Reception" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md col-span-2" style="transition-delay: 150ms;">
+                        <img src="https://placehold.co/800x400/f0ebe5/6d8a89?text=Consultation+Room" alt="Consultation Room" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/400x400/f0ebe5/6d8a89?text=Natural+Light" alt="Natural Light in Clinic" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md col-span-2" style="transition-delay: 450ms;">
+                        <img src="https://placehold.co/800x400/f0ebe5/6d8a89?text=Waiting+Lounge" alt="Waiting Lounge" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 600ms;">
+                        <img src="https://placehold.co/400x400/f0ebe5/6d8a89?text=Details" alt="Clinic Details" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 750ms;">
+                        <img src="https://placehold.co/400x400/f0ebe5/6d8a89?text=Exterior" alt="Clinic Exterior" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-brand-beige">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Take the First Step on Your Wellness Journey</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-stone-600">Ready to feel your best? Contact us to schedule your initial consultation. Our team is here to guide and support you.</p>
+                     <div class="mt-8 inline-flex items-center justify-center space-x-2 bg-green-100 text-green-800 font-semibold py-3 px-6 rounded-full">
+                        <i data-feather="phone-call" class="w-5 h-5"></i>
+                        <a href="tel:+1234567890" class="text-lg">+1 (234) 567-890</a>
+                    </div>
+                    <div class="mt-6">
+                        <a href="mailto:contact@dralishaverma.com" class="bg-brand-green text-white font-bold py-4 px-10 rounded-full hover:bg-brand-green-dark transition-all duration-300 transform hover:scale-105 inline-block">
+                           Book Your Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-300">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p>&copy; 2024 Dr. Alisha Verma. All Rights Reserved.</p>
+            <p class="text-sm text-stone-400 mt-2">123 Wellness Way, Suite 100, Greenfield, ST 12345</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white"><i data-feather="twitter"></i></a>
+                <a href="#" class="hover:text-white"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Feather Icons Initialization ---
+        feather.replace();
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+             // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // --- Animate on Scroll ---
+        const animatedElements = document.querySelectorAll('.fade-in-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Sticky Header Shadow on Scroll ---
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        };
+
+    </script>
+</body>
+</html>

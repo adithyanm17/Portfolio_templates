@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Carter | Aerospace Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #FDFDFD;
+            color: #4A5568; /* gray-600 */
+        }
+        
+        /* Custom Colors */
+        :root {
+            --primary-teal: #0D9488; /* teal-600 */
+            --primary-teal-dark: #047857; /* teal-700 */
+            --accent-terracotta: #E85D04; /* A custom burnt orange/terracotta */
+            --dark-text: #1E293B; /* slate-800 */
+            --light-bg: #FFFFFF;
+            --border-color: #E2E8F0; /* slate-200 */
+        }
+
+        /* Subtle Texture Background */
+        .pattern-bg {
+             background-color: #F8FAFC;
+             background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E2E8F0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1), transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Experience Timeline */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px; /* Adjust for larger dot */
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            border: 4px solid var(--primary-teal);
+        }
+        
+        .stagger-children > * {
+            transition-delay: var(--stagger-delay, 0s);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-[var(--dark-text)]">Liam Carter</a>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#skills" class="text-slate-600 hover:text-[var(--primary-teal)] font-medium transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-600 hover:text-[var(--primary-teal)] font-medium transition-colors">Experience</a>
+                <a href="#achievements" class="text-slate-600 hover:text-[var(--primary-teal)] font-medium transition-colors">Achievements</a>
+            </nav>
+
+            <a href="#contact" class="hidden lg:block bg-[var(--primary-teal)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-[var(--primary-teal-dark)] transition-all duration-300 shadow-sm hover:shadow-lg">
+                Contact Me
+            </a>
+
+            <button id="mobile-menu-button" class="lg:hidden text-slate-700">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-[var(--border-color)]">
+            <a href="#skills" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">Skills</a>
+            <a href="#experience" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">Experience</a>
+            <a href="#achievements" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">Achievements</a>
+            <a href="#contact" class="block py-3 px-6 text-slate-600 hover:bg-slate-50 border-t">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-36 pb-24 bg-[var(--light-bg)]">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal visible">
+                        <h1 class="text-5xl md:text-6xl font-extrabold text-[var(--dark-text)] leading-tight">
+                            Aerospace Engineer Crafting the Future of Flight.
+                        </h1>
+                        <p class="mt-6 text-lg text-slate-600 max-w-lg">
+                           Specializing in aerodynamics and propulsion systems, I design and analyze solutions that push the boundaries of performance and efficiency.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                            <a href="./resume.pdf" download class="bg-[var(--accent-terracotta)] text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i data-feather="download" class="w-5 h-5"></i>
+                                <span>Download CV</span>
+                            </a>
+                            <a href="mailto:liam.carter@example.com" class="bg-white text-slate-700 font-bold py-3 px-8 rounded-lg text-center border-2 border-[var(--border-color)] hover:bg-slate-50 hover:border-slate-300 transition-colors flex items-center justify-center gap-2">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                                <span>Send an Email</span>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="reveal visible" style="transition-delay: 150ms;">
+                        <div class="p-4 border-4 border-slate-200 rounded-2xl">
+                             <img src="https://placehold.co/500x550/0D9488/FFFFFF?text=Liam+Carter" class="rounded-xl shadow-xl w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 pattern-bg">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center reveal">
+                    <h2 class="text-3xl font-bold text-[var(--dark-text)]">About Me</h2>
+                    <p class="mt-6 text-slate-600 leading-relaxed text-lg">
+                        I'm an aerospace engineer with a passion for solving complex aerodynamic challenges. My experience spans from conceptual design in R&D to hands-on testing and validation. I thrive on translating theoretical models into real-world applications that perform reliably under extreme conditions. Holding a Ph.D. from Caltech, I am dedicated to a career of innovation and excellence in aerospace engineering.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-[var(--light-bg)]">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto reveal">
+                     <h2 class="text-3xl font-bold text-[var(--dark-text)]">Areas of Expertise</h2>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-12 stagger-children">
+                    <!-- Category 1 -->
+                    <div class="reveal" style="--stagger-delay: 100ms;">
+                        <h3 class="font-bold text-xl text-[var(--dark-text)]">Design & Analysis</h3>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Aerodynamics</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Propulsion Systems</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">CFD</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Structural Analysis</span>
+                        </div>
+                    </div>
+                    <!-- Category 2 -->
+                    <div class="reveal" style="--stagger-delay: 200ms;">
+                         <h3 class="font-bold text-xl text-[var(--dark-text)]">Software & Tools</h3>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">ANSYS Fluent</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">CATIA</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">MATLAB</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Python</span>
+                        </div>
+                    </div>
+                    <!-- Category 3 -->
+                    <div class="reveal" style="--stagger-delay: 300ms;">
+                        <h3 class="font-bold text-xl text-[var(--dark-text)]">Methodologies</h3>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Systems Engineering</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Agile Development</span>
+                            <span class="bg-teal-50 text-[var(--primary-teal)] font-semibold py-1 px-3 rounded-full">Wind Tunnel Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 pattern-bg">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto reveal">
+                     <h2 class="text-3xl font-bold text-center text-[var(--dark-text)]">Career Progression</h2>
+                </div>
+                <div class="mt-16 max-w-2xl mx-auto">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item relative pl-8 reveal">
+                        <p class="text-[var(--primary-teal)] font-semibold">2019 - Present</p>
+                        <h3 class="text-xl font-bold text-[var(--dark-text)] mt-1">Senior Propulsion Engineer, AstroDynamics</h3>
+                        <p class="text-slate-600 mt-2">Leading the design of next-generation rocket engines. Improved fuel efficiency by 12% through advanced CFD modeling and material selection.</p>
+                    </div>
+                     <!-- Experience 2 -->
+                    <div class="timeline-item relative pl-8 reveal">
+                        <p class="text-[var(--primary-teal)] font-semibold">2016 - 2019</p>
+                        <h3 class="text-xl font-bold text-[var(--dark-text)] mt-1">Aerodynamics Engineer, AeroVenture</h3>
+                        <p class="text-slate-600 mt-2">Developed and validated aerodynamic models for hypersonic vehicles. Authored 3 peer-reviewed papers on boundary layer analysis.</p>
+                    </div>
+                     <!-- Experience 3 -->
+                    <div class="timeline-item relative pl-8 reveal">
+                        <p class="text-[var(--primary-teal)] font-semibold">2014 - 2016</p>
+                        <h3 class="text-xl font-bold text-[var(--dark-text)] mt-1">Research Assistant, Caltech GALCIT</h3>
+                        <p class="text-slate-600 mt-2">Conducted experimental research in the T5 Hypervelocity Shock Tunnel, contributing to foundational research in high-speed flight.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-24 bg-[var(--light-bg)]">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto reveal">
+                     <h2 class="text-3xl font-bold text-[var(--dark-text)]">Featured Projects</h2>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 gap-8 stagger-children">
+                    <!-- Achievement 1 -->
+                    <div class="project-card reveal bg-white rounded-lg border border-[var(--border-color)] overflow-hidden" style="--stagger-delay: 100ms;">
+                        <div class="overflow-hidden"><img src="https://placehold.co/600x400/F8FAFC/1E293B?text=Project+Hyperion" class="transition-transform duration-300"></div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-[var(--dark-text)]">Project Hyperion Engine</h3>
+                            <p class="mt-2 text-slate-600">Led the design and successful test-firing of a prototype methalox staged-combustion rocket engine, achieving a record thrust-to-weight ratio.</p>
+                        </div>
+                    </div>
+                    <!-- Achievement 2 -->
+                    <div class="project-card reveal bg-white rounded-lg border border-[var(--border-color)] overflow-hidden" style="--stagger-delay: 200ms;">
+                         <div class="overflow-hidden"><img src="https://placehold.co/600x400/F8FAFC/1E293B?text=Aero-Thermal+Modeling" class="transition-transform duration-300"></div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl text-[var(--dark-text)]">Aero-Thermal Modeling System</h3>
+                            <p class="mt-2 text-slate-600">Developed a high-fidelity computational model to predict thermal loads on hypersonic vehicle control surfaces, adopted as a new standard at AeroVenture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 pattern-bg">
+            <div class="container mx-auto px-6 text-center reveal">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-4xl font-extrabold text-[var(--dark-text)]">Let's Connect</h2>
+                    <p class="mt-6 text-lg text-slate-600">I am always interested in discussing new challenges in aerospace. If you'd like to collaborate or have an opportunity in mind, please reach out.</p>
+                    <div class="mt-10">
+                        <a href="mailto:liam.carter@example.com" class="bg-[var(--accent-terracotta)] text-white font-bold py-4 px-12 rounded-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 inline-block shadow-xl">
+                           Send an Email
+                        </a>
+                    </div>
+                     <div class="mt-8 flex justify-center space-x-6">
+                        <a href="#" class="text-slate-500 hover:text-slate-800"><i data-feather="linkedin" class="w-7 h-7"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-slate-800"><i data-feather="github" class="w-7 h-7"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-white border-t border-[var(--border-color)]">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2024 Liam Carter | Aerospace Engineer.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Feather Icons Initialization ---
+        feather.replace();
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // --- Animate on Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

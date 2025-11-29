@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Emily Carter | Cardiology Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000; /* Black */
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        /* Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .fade-in-up-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .specialty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <!-- Header -->
+    <header id="header" class="bg-black/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm border-b border-gray-800/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">Dr. Emily Carter</a>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-emerald-400 transition-colors">About</a>
+                <a href="#specialties" class="text-gray-300 hover:text-emerald-400 transition-colors">Specialties</a>
+                <a href="#gallery" class="text-gray-300 hover:text-emerald-400 transition-colors">Clinic Gallery</a>
+                <a href="#contact" class="text-gray-300 hover:text-emerald-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                 <div class="flex items-center space-x-2">
+                    <i data-feather="phone" class="text-emerald-400 w-4 h-4"></i>
+                    <a href="tel:+1234567890" class="font-semibold text-gray-200 hover:text-emerald-400">+1 (234) 567-890</a>
+                </div>
+                <a href="#contact" class="bg-emerald-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105">
+                    Book Appointment
+                </a>
+            </div>
+
+            <button id="mobile-menu-button" class="lg:hidden text-gray-300">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-black border-t border-gray-800">
+            <a href="#about" class="block py-3 px-6 text-gray-300 hover:bg-gray-900">About</a>
+            <a href="#specialties" class="block py-3 px-6 text-gray-300 hover:bg-gray-900">Specialties</a>
+            <a href="#gallery" class="block py-3 px-6 text-gray-300 hover:bg-gray-900">Clinic Gallery</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-300 hover:bg-gray-900">Contact</a>
+            <div class="p-4">
+                 <a href="#contact" class="w-full text-center block bg-emerald-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-emerald-700 transition-colors">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-20 bg-black">
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                        Compassionate Heart Care, Uncompromised Expertise.
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-300">
+                        Welcome to a practice where patient well-being is the priority. Dr. Emily Carter combines years of dedicated experience with the latest in cardiac care to protect your heart's health.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="#contact" class="bg-emerald-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105">Book an Appointment</a>
+                        <a href="#about" class="bg-gray-800 text-gray-200 font-semibold py-3 px-8 rounded-full hover:bg-gray-700 transition-colors">Learn More</a>
+                    </div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 200ms;">
+                    <img src="https://placehold.co/600x600/059669/f0fdf4?text=Dr.+Emily+Carter" alt="Dr. Emily Carter" class="rounded-3xl shadow-2xl shadow-black/30">
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section id="specialties" class="py-24 bg-gray-900/70">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-emerald-400">Areas of Expertise</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-bold text-white">Specialized Medical Services</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Providing a comprehensive range of cardiac services to diagnose, treat, and manage heart conditions with precision and care.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Specialty 1 -->
+                    <div class="specialty-card fade-in-up bg-gray-900 p-8 rounded-2xl shadow-lg shadow-black/30 transition-all duration-300 text-left border border-gray-800">
+                        <div class="bg-gray-800 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="activity"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-white">Preventive Cardiology</h3>
+                        <p class="mt-2 text-gray-400">Proactive strategies and lifestyle management to reduce the risk of developing heart disease.</p>
+                    </div>
+                    <!-- Specialty 2 -->
+                    <div class="specialty-card fade-in-up bg-gray-900 p-8 rounded-2xl shadow-lg shadow-black/30 transition-all duration-300 text-left border border-gray-800" style="transition-delay: 150ms;">
+                        <div class="bg-gray-800 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="shield"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-white">Coronary Artery Disease</h3>
+                        <p class="mt-2 text-gray-400">Expert diagnosis and management of arterial blockages to restore blood flow and heart function.</p>
+                    </div>
+                    <!-- Specialty 3 -->
+                    <div class="specialty-card fade-in-up bg-gray-900 p-8 rounded-2xl shadow-lg shadow-black/30 transition-all duration-300 text-left border border-gray-800" style="transition-delay: 300ms;">
+                        <div class="bg-gray-800 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-feather="heart"></i>
+                        </div>
+                        <h3 class="mt-6 font-bold text-xl text-white">Heart Failure Management</h3>
+                        <p class="mt-2 text-gray-400">Comprehensive care plans to improve quality of life for patients with heart failure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Experience Section -->
+        <section id="about" class="py-24 bg-black">
+            <div class="container mx-auto px-6 grid lg:grid-cols-5 gap-16 items-center">
+                <div class="lg:col-span-2 fade-in-up">
+                    <img src="https://placehold.co/500x600/059669/f0fdf4?text=Professional" alt="Dr. Carter in a professional setting" class="rounded-2xl shadow-xl shadow-black/20 w-full">
+                </div>
+                <div class="lg:col-span-3 fade-in-up" style="transition-delay: 200ms;">
+                     <h2 class="text-sm font-bold uppercase tracking-widest text-emerald-400">About Dr. Carter</h2>
+                     <p class="mt-4 text-3xl md:text-4xl font-bold text-white">A Commitment to Patient-Centered Care</p>
+                     <p class="mt-6 text-gray-300 leading-relaxed">
+                        Dr. Emily Carter is a board-certified cardiologist with over 15 years of experience in the field. She graduated with honors from Stanford University School of Medicine and completed her residency and fellowship at Johns Hopkins Hospital. Her philosophy is simple: treat every patient with the same dedication and compassion she would offer a family member.
+                     </p>
+                     <div class="mt-8 border-t border-gray-800 pt-8">
+                         <h3 class="font-semibold text-white">Professional Experience</h3>
+                         <ul class="mt-4 space-y-4">
+                            <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-emerald-500 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold text-gray-200">Cardiologist, City Heart Center</span> (2015 - Present)</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-emerald-500 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold text-gray-200">Fellowship in Cardiology, Johns Hopkins</span> (2012 - 2015)</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-feather="check-circle" class="text-emerald-500 w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><span class="font-semibold text-gray-200">Residency, Johns Hopkins Hospital</span> (2009 - 2012)</span>
+                            </li>
+                         </ul>
+                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Gallery Section -->
+        <section id="gallery" class="py-24 bg-gray-900/70">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-emerald-400">Our Facility</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-bold text-white">A Modern & Welcoming Environment</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Our clinic is equipped with state-of-the-art technology in a comfortable and calming setting to ensure you feel at ease during your visit.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md">
+                        <img src="https://placehold.co/400x400/111827/6ee7b7?text=Reception" alt="Clinic Reception" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md col-span-2" style="transition-delay: 150ms;">
+                        <img src="https://placehold.co/800x400/111827/6ee7b7?text=Examination+Room" alt="Examination Room" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/400x400/111827/6ee7b7?text=Medical+Tech" alt="Medical Technology" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md col-span-2" style="transition-delay: 450ms;">
+                        <img src="https://placehold.co/800x400/111827/6ee7b7?text=Waiting+Area" alt="Waiting Area" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 600ms;">
+                        <img src="https://placehold.co/400x400/111827/6ee7b7?text=Staff" alt="Clinic Staff" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                     <div class="gallery-item fade-in-up rounded-xl overflow-hidden shadow-md" style="transition-delay: 750ms;">
+                        <img src="https://placehold.co/400x400/111827/6ee7b7?text=Exterior" alt="Clinic Exterior" class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-black">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Ready to Schedule Your Visit?</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-300">Contact us today to book your appointment. Our team is ready to assist you with your healthcare needs. We look forward to welcoming you.</p>
+                     <div class="mt-8 inline-flex items-center justify-center space-x-2 bg-gray-800 text-emerald-400 font-semibold py-3 px-6 rounded-full">
+                        <i data-feather="phone-call" class="w-5 h-5"></i>
+                        <a href="tel:+1234567890" class="text-lg">+1 (234) 567-890</a>
+                    </div>
+                    <div class="mt-6">
+                        <a href="mailto:contact@dremilycarter.com" class="bg-emerald-600 text-white font-bold py-4 px-10 rounded-full hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 inline-block">
+                           Book Your Appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p>&copy; 2024 Dr. Emily Carter. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">123 Health St, Medville, ST 12345</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white"><i data-feather="twitter"></i></a>
+                <a href="#" class="hover:text-white"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Feather Icons Initialization ---
+        feather.replace();
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+             // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // --- Animate on Scroll ---
+        const animatedElements = document.querySelectorAll('.fade-in-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Sticky Header Shadow on Scroll ---
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg', 'shadow-black/20');
+            } else {
+                header.classList.remove('shadow-lg', 'shadow-black/20');
+            }
+        };
+
+    </script>
+</body>
+</html>

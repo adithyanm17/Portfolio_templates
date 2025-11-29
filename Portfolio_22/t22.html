@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Samuel Carter | General Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F7F8FA; /* A slightly off-white */
+            color: #334155; /* slate-700 */
+        }
+        
+        /* Custom Colors */
+        :root {
+            --primary-blue: #3B82F6; /* blue-500 */
+            --accent-red: #EF4444; /* red-500 */
+            --light-blue-bg: #F0F5FF; 
+            --dark-text: #1E293B; /* slate-800 */
+            --border-color: #E2E8F0; /* slate-200 */
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px; /* Adjust as needed */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-[var(--dark-text)]">Dr. Samuel Carter</a>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="text-slate-600 hover:text-[var(--primary-blue)] font-medium transition-colors">About</a>
+                <a href="#services" class="text-slate-600 hover:text-[var(--primary-blue)] font-medium transition-colors">Services</a>
+                <a href="#contact" class="text-slate-600 hover:text-[var(--primary-blue)] font-medium transition-colors">Contact</a>
+            </nav>
+
+            <a href="#contact" class="hidden lg:block bg-[var(--primary-blue)] text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-sm hover:shadow-lg">
+                Book Appointment
+            </a>
+
+            <button id="mobile-menu-button" class="lg:hidden text-slate-700">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-[var(--border-color)]">
+            <a href="#about" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">About</a>
+            <a href="#services" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">Services</a>
+            <a href="#contact" class="block py-3 px-6 text-slate-600 hover:bg-slate-50">Contact</a>
+            <div class="p-4 border-t border-slate-100">
+                 <a href="#contact" class="w-full text-center block bg-[var(--primary-blue)] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-36 pb-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="reveal visible">
+                        <span class="font-semibold text-[var(--primary-blue)]">DR. SAMUEL CARTER, M.D.</span>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-[var(--dark-text)] leading-tight mt-4">
+                            Your Partner in Lifelong Health.
+                        </h1>
+                        <p class="mt-6 text-lg text-slate-600 max-w-lg">
+                           Providing trusted, patient-centered primary care. We focus on understanding you to deliver the best health outcomes.
+                        </p>
+                    </div>
+                    <div class="reveal visible bg-[var(--light-blue-bg)] p-8 rounded-2xl shadow-sm" style="transition-delay: 150ms;">
+                         <div class="text-center">
+                            <h3 class="text-xl font-bold text-[var(--dark-text)]">Book Your Consultation</h3>
+                            <p class="mt-2 text-slate-600">New patients are welcome. Schedule your visit today.</p>
+                            <a href="#contact" class="mt-6 w-full block bg-[var(--accent-red)] text-white font-bold py-3 px-8 rounded-lg hover:bg-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                Request Appointment
+                            </a>
+                            <p class="mt-4 text-sm text-slate-500">Or call us at <a href="tel:+1234567890" class="font-semibold text-[var(--primary-blue)] hover:underline">+1 (234) 567-890</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Our Approach Section -->
+        <section id="about" class="py-24">
+            <div class="container mx-auto px-6 grid lg:grid-cols-5 gap-16 items-center">
+                <div class="reveal lg:col-span-2">
+                    <img src="https://placehold.co/400x450/FFFFFF/1E293B?text=Dr.+Carter" alt="Dr. Samuel Carter" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="reveal lg:col-span-3" style="transition-delay: 150ms;">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-text)]">A Modern Approach to Primary Care</h2>
+                    <p class="mt-6 text-slate-600 leading-relaxed">
+                        Dr. Carter believes that great healthcare starts with a great relationship. With a decade of experience from Duke University Health System, he combines deep medical knowledge with a personal commitment to each patient's journey.
+                    </p>
+                    <div class="mt-8 space-y-6 border-t border-[var(--border-color)] pt-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[var(--primary-blue)] text-white flex items-center justify-center font-bold text-lg">1</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-[var(--dark-text)]">We Listen</h4>
+                                <p class="text-slate-500 mt-1">We take the time to hear your story and understand your health goals.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[var(--primary-blue)] text-white flex items-center justify-center font-bold text-lg">2</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-[var(--dark-text)]">We Diagnose</h4>
+                                <p class="text-slate-500 mt-1">Using modern diagnostics, we get to the root of your health concerns.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[var(--primary-blue)] text-white flex items-center justify-center font-bold text-lg">3</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-[var(--dark-text)]">We Partner</h4>
+                                <p class="text-slate-500 mt-1">We create a personalized health plan with you, not for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto reveal">
+                     <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-text)]">Comprehensive Health Services</h2>
+                     <p class="mt-4 text-slate-600">From routine check-ups to managing complex conditions, we've got you covered.</p>
+                </div>
+                <div class="mt-16 max-w-3xl mx-auto space-y-4 reveal" style="transition-delay: 150ms;">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item bg-slate-50 rounded-lg border border-[var(--border-color)]">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left">
+                            <span class="text-lg font-semibold text-[var(--dark-text)]">Preventive Care & Wellness</span>
+                            <i data-feather="plus" class="accordion-icon w-6 h-6 text-[var(--primary-blue)]"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-slate-600">
+                            <p>Annual physicals, immunizations, and personalized health screenings to proactively manage your well-being and prevent future health issues.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item bg-slate-50 rounded-lg border border-[var(--border-color)]">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left">
+                            <span class="text-lg font-semibold text-[var(--dark-text)]">Chronic Disease Management</span>
+                             <i data-feather="plus" class="accordion-icon w-6 h-6 text-[var(--primary-blue)]"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-slate-600">
+                           <p>Expert, ongoing care for conditions such as diabetes, high blood pressure, and heart disease, with a focus on improving your quality of life.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item bg-slate-50 rounded-lg border border-[var(--border-color)]">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 text-left">
+                            <span class="text-lg font-semibold text-[var(--dark-text)]">Acute Illness & Injury</span>
+                             <i data-feather="plus" class="accordion-icon w-6 h-6 text-[var(--primary-blue)]"></i>
+                        </button>
+                        <div class="accordion-content px-5 text-slate-600">
+                            <p>Timely diagnosis and treatment for common illnesses like the flu, infections, and minor injuries to get you back on your feet quickly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+             <div class="container mx-auto px-6 reveal">
+                 <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 lg:p-16 grid lg:grid-cols-2 gap-10">
+                     <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[var(--dark-text)]">Ready to Begin?</h2>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Our office is conveniently located and we are currently accepting new patients. Reach out to schedule your first visit.
+                        </p>
+                        <div class="mt-8 space-y-4">
+                            <p class="text-lg flex items-center space-x-3"><i data-feather="map-pin" class="w-6 h-6 text-[var(--primary-blue)]"></i><span>400 Health Plaza, Medville, ST</span></p>
+                            <p class="text-lg flex items-center space-x-3"><i data-feather="phone" class="w-6 h-6 text-[var(--primary-blue)]"></i><a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p>
+                             <p class="text-lg flex items-center space-x-3"><i data-feather="mail" class="w-6 h-6 text-[var(--primary-blue)]"></i><a href="mailto:office@drsamuelcarter.com" class="hover:underline">office@drsamuelcarter.com</a></p>
+                        </div>
+                     </div>
+                     <div class="bg-slate-50 rounded-lg p-8">
+                        <h3 class="text-xl font-bold text-[var(--dark-text)]">Office Hours</h3>
+                        <ul class="mt-4 space-y-2 text-slate-600">
+                            <li class="flex justify-between"><span>Monday - Thursday</span> <span class="font-semibold">9am - 5pm</span></li>
+                            <li class="flex justify-between"><span>Friday</span> <span class="font-semibold">9am - 3pm</span></li>
+                            <li class="flex justify-between"><span>Saturday & Sunday</span> <span class="font-semibold">Closed</span></li>
+                        </ul>
+                         <a href="mailto:office@drsamuelcarter.com" class="mt-6 w-full text-center block bg-[var(--primary-blue)] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">
+                            Send Us an Email
+                        </a>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-[var(--dark-text)] text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Dr. Samuel Carter | General Practice.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Feather Icons Initialization ---
+        feather.replace();
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // --- Animate on Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- Accordion Logic ---
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const wasActive = accordionItem.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle the clicked accordion
+                if (!wasActive) {
+                    accordionItem.classList.toggle('active');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
+
