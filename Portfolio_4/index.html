@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Jane Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">Jane Doe</a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section with Image -->
+        <section id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text reveal">
+                        <span class="tagline">Teacher | Psychologist | Manager</span>
+                        <h1>Jane Doe</h1>
+                        <p>
+                            A dedicated professional driving meaningful impact through a blend of expertise in education, psychology, and management.
+                        </p>
+                        <a href="#contact" class="btn">
+                            Get in Touch
+                        </a>
+                    </div>
+                    <!-- Right side: Image -->
+                    <div class="hero-image reveal" style="transition-delay: 200ms;">
+                        <img src="image.png" alt="Professional headshot of Jane Doe">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>About Me</h2>
+                    <p>My professional philosophy and approach.</p>
+                </div>
+                <div class="about-content reveal">
+                    <p>
+                        Hello! I'm Jane, a passionate professional with a diverse background that spans clinical psychology, educational leadership, and strategic management. My career is driven by a core belief: understanding human behavior is key to fostering development, whether in a student, a client, or a corporate team.
+                    </p>
+                    <p>
+                        I thrive on creating environments where individuals feel supported, empowered, and equipped to achieve their best. This portfolio is a glimpse into my journey and my commitment to making a positive difference.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Professional Journey</h2>
+                    <p>A timeline of my key roles and accomplishments.</p>
+                </div>
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <h3>Senior Project Manager</h3>
+                            <p class="timeline-company">Innovate Corp | 2020 - Present</p>
+                            <p>Led cross-functional teams to deliver complex projects on time and within budget, improving process efficiency by 25%.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <h3>Clinical Psychologist</h3>
+                            <p class="timeline-company">MindWell Clinic | 2017 - 2020</p>
+                            <p>Provided evidence-based therapy to diverse populations. Specialized in CBT and developed new group therapy programs.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content">
+                            <h3>Lead Teacher & Curriculum Head</h3>
+                            <p class="timeline-company">Future Leaders Academy | 2014 - 2017</p>
+                            <p>Designed and implemented an innovative, student-centered curriculum that resulted in a 15% increase in standardized test scores.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>What I Offer</h2>
+                    <p>A blend of skills tailored to meet diverse professional needs.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Educational Consulting</h3>
+                        <p>Curriculum design, teacher training, and implementing innovative pedagogical strategies to enhance learning outcomes.</p>
+                    </div>
+
+                    <div class="service-card reveal" style="transition-delay: 200ms;">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3>Psychological Services</h3>
+                        <p>Individual & group therapy, psychological assessments, and mental health workshops for organizations.</p>
+                    </div>
+
+                    <div class="service-card reveal" style="transition-delay: 400ms;">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Leadership & Management</h3>
+                        <p>Strategic planning, team leadership, project management, and organizational development to drive growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content reveal">
+                    <h2>Let's Connect</h2>
+                    <p>I'm currently available for new opportunities. Feel free to reach out via email or LinkedIn.</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        <span class="contact-divider">|</span>
+                        <a href="#">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jane Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
