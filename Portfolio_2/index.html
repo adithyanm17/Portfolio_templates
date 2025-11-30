@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Jane Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#home">Jane Doe</a>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="#home" class="mobile-menu-link">Home</a>
+                <a href="#about" class="mobile-menu-link">About</a>
+                <a href="#experience" class="mobile-menu-link">Experience</a>
+                <a href="#services" class="mobile-menu-link">Services</a>
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="reveal">
+                        <span>Empowering Minds,</span>
+                        <span>Fostering Growth & Inspiring Change.</span>
+                    </h1>
+                    <p class="reveal" data-delay="200">
+                        A dedicated professional blending expertise in education, psychology, and management to drive meaningful impact and unlock potential.
+                    </p>
+                    <a href="#contact" class="btn reveal" data-delay="400">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image reveal">
+                        <div class="image-decor"></div>
+                        <img src="image.png" alt="Professional headshot of Jane Doe" class="profile-image">
+                    </div>
+                    <div class="about-text reveal" data-delay="200">
+                        <h2>About Me</h2>
+                        <p>
+                            Hello! I'm Jane, a passionate professional with a diverse background that spans clinical psychology, educational leadership, and strategic management. My career is driven by a core belief: understanding human behavior is key to fostering development, whether in a student, a client, or a corporate team.
+                        </p>
+                        <p>
+                            Across my roles, I've honed skills in curriculum development, therapeutic intervention, and organizational leadership. I thrive on creating environments where individuals feel supported, empowered, and equipped to achieve their best. This portfolio is a glimpse into my journey and my commitment to making a positive difference.
+                        </p>
+                        <a href="#experience" class="text-link">View my experience &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Professional Journey</h2>
+                    <p>A timeline of my key roles and accomplishments.</p>
+                </div>
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content left">
+                            <div class="timeline-card">
+                                <h3>Senior Project Manager</h3>
+                                <p class="timeline-meta">Innovate Corp | 2020 - Present</p>
+                                <p>Led cross-functional teams to deliver complex projects on time and within budget, improving process efficiency by 25%.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content right">
+                            <div class="timeline-card">
+                                <h3>Clinical Psychologist</h3>
+                                <p class="timeline-meta">MindWell Clinic | 2017 - 2020</p>
+                                <p>Provided evidence-based therapy to diverse populations. Specialized in CBT and developed new group therapy programs.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content left">
+                            <div class="timeline-card">
+                                <h3>Lead Teacher & Curriculum Head</h3>
+                                <p class="timeline-meta">Future Leaders Academy | 2014 - 2017</p>
+                                <p>Designed and implemented an innovative, student-centered curriculum that resulted in a 15% increase in standardized test scores.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>What I Offer</h2>
+                    <p>A blend of skills tailored to meet diverse professional needs.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">🎓</div>
+                        <h3>Education & Training</h3>
+                        <p>Customized learning solutions, curriculum design, and professional development workshops that drive engagement and knowledge retention.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">🧠</div>
+                        <h3>Psychological Services</h3>
+                        <p>Evidence-based therapeutic interventions, mental health consultations, and wellness programs for individuals and organizations.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">💼</div>
+                        <h3>Business Consulting</h3>
+                        <p>Strategic planning, leadership development, and organizational change management to help businesses thrive in dynamic environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info reveal">
+                        <h2>Let's Connect</h2>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                        <div class="contact-details">
+                            <p>📧 jane.doe@example.com</p>
+                            <p>📞 (555) 123-4567</p>
+                            <p>📍 San Francisco, CA</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal" data-delay="200">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+            <p>Designed with ❤️ by Jane Doe</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
