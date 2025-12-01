@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dossier | Jane Doe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h1>Jane Doe</h1>
+                <p class="tagline">Teacher | Psychologist | Manager</p>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li>
+                            <a href="#home" class="nav-link">
+                                <span class="nav-indicator"></span>
+                                <span class="nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-link">
+                                <span class="nav-indicator"></span>
+                                <span class="nav-text">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#experience" class="nav-link">
+                                <span class="nav-indicator"></span>
+                                <span class="nav-text">Experience</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link">
+                                <span class="nav-indicator"></span>
+                                <span class="nav-text">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">&copy; 2024 Jane Doe. All rights reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section">
+                <div class="fade-in-up">
+                    <img src="image.png" alt="Jane Doe" class="profile-image">
+                    <h2>A Passion for <span class="accent-text">People</span>,<br>a Drive for <span class="accent-text">Progress</span>.</h2>
+                    <p class="intro-text">
+                        With a unique intersection of skills in education, psychology, and management, I architect environments for growth, understanding, and success. Welcome to my professional story.
+                    </p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="fade-in-up">
+                    <h3 class="section-subtitle">My Philosophy</h3>
+                    <p class="section-title">
+                       I believe that the foundation of all achievement—whether in learning, healing, or business—is a deep understanding of the human element.
+                    </p>
+                    <div class="about-content">
+                        <p>
+                            My career has been a continuous exploration of this principle. As a teacher, I saw how personalized learning strategies could unlock a student's potential. As a clinical psychologist, I witnessed the profound impact of empathy and evidence-based care on mental well-being. And as a manager, I've applied these insights to build teams that are not only productive but also collaborative, resilient, and motivated.
+                        </p>
+                        <p>
+                            My goal is to bridge these disciplines, creating holistic strategies that address both individual needs and organizational objectives.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <div class="fade-in-up">
+                    <h3 class="section-subtitle">Career Timeline</h3>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-date">2020 - PRESENT</p>
+                                <h4>Senior Project Manager, Innovate Corp</h4>
+                                <p>Orchestrated project lifecycles, leading cross-functional teams to enhance process efficiency by over 25% and deliver ahead of schedule.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-date">2017 - 2020</p>
+                                <h4>Clinical Psychologist, MindWell Clinic</h4>
+                                <p>Delivered specialized CBT and developed innovative group therapy programs, improving patient outcomes and clinic service offerings.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-date">2014 - 2017</p>
+                                <h4>Lead Teacher & Curriculum Head, Future Leaders Academy</h4>
+                                <p>Pioneered a student-centric curriculum that led to a significant 15% rise in standardized test scores and student engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="fade-in-up">
+                    <h3 class="section-subtitle">Get in Touch</h3>
+                    <h2>Have a project or opportunity you'd like to discuss?</h2>
+                    <p class="contact-text">I'm always open to new challenges and collaborations. Let's connect and explore how we can work together.</p>
+                    <a href="mailto:your.email@example.com" class="cta-button">
+                        Email Me
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <div class="logo">Jane Doe</div>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#home" class="mobile-menu-link">Home</a>
+            <a href="#about" class="mobile-menu-link">About</a>
+            <a href="#experience" class="mobile-menu-link">Experience</a>
+            <a href="#contact" class="mobile-menu-link">Contact</a>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
