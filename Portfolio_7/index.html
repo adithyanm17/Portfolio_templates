@@ -1,66 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Dossier | Jane Doe</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #334155; /* slate-700 */
-        }
-        /* Custom scrollbar for the main content area */
-        .main-content::-webkit-scrollbar {
-            width: 6px;
-        }
-        .main-content::-webkit-scrollbar-track {
-            background: #f1f5f9; /* slate-100 */
-        }
-        .main-content::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* slate-300 */
-            border-radius: 10px;
-        }
-        .main-content::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* slate-400 */
-        }
-        
-        /* Animation Classes */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.5s ease-out;
-        }
-        .fade-in-up-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Gradient Text Helper */
-        .gradient-text {
-            background-image: linear-gradient(to right, #d946ef, #4f46e5);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Active Nav Link Style */
-        .nav-link.active span:last-child {
-            color: #a855f7; /* purple-500 */
-            font-weight: 600;
-        }
-        .nav-link.active .nav-indicator {
-            width: 40px;
-            background-image: linear-gradient(to right, #d946ef, #4f46e5);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50">
+<body>
 
     <div class="flex min-h-screen">
         <!-- Left Sidebar -->
@@ -115,7 +65,7 @@
                 <!-- Home Section -->
                 <section id="home" class="min-h-screen flex items-center">
                     <div class="fade-in-up">
-                        <img src="https://placehold.co/150x150/f1f5f9/a855f7?text=JD" alt="Jane Doe" class="rounded-full mb-8 shadow-xl">
+                        <img src="image.png" alt="Jane Doe" class="rounded-full mb-8 shadow-xl" width="150" height="150">
                         <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
                             A Passion for <span class="gradient-text">People</span>,
                             a Drive for <span class="gradient-text">Progress</span>.
@@ -148,24 +98,24 @@
                 <section id="experience" class="py-20 md:py-32">
                     <div class="fade-in-up">
                          <h3 class="text-sm font-semibold tracking-widest uppercase mb-12 gradient-text">Career Timeline</h3>
-                         <div class="relative border-l-2 border-gray-200 ml-3">
+                         <div class="timeline">
                              <!-- Item 1 -->
-                             <div class="mb-12 ml-8">
-                                 <div class="absolute -left-[13px] mt-2 w-6 h-6 bg-slate-50 rounded-full border-4 border-fuchsia-500"></div>
+                             <div class="timeline-item">
+                                 <div class="timeline-dot border-fuchsia-500"></div>
                                  <p class="text-sm text-gray-500">2020 - PRESENT</p>
                                  <h4 class="text-lg font-bold text-gray-900 mt-1">Senior Project Manager, Innovate Corp</h4>
                                  <p class="text-slate-600 mt-2 text-sm">Orchestrated project lifecycles, leading cross-functional teams to enhance process efficiency by over 25% and deliver ahead of schedule.</p>
                              </div>
                              <!-- Item 2 -->
-                              <div class="mb-12 ml-8">
-                                 <div class="absolute -left-[13px] mt-2 w-6 h-6 bg-slate-50 rounded-full border-4 border-purple-500"></div>
+                              <div class="timeline-item">
+                                 <div class="timeline-dot border-purple-500"></div>
                                  <p class="text-sm text-gray-500">2017 - 2020</p>
                                  <h4 class="text-lg font-bold text-gray-900 mt-1">Clinical Psychologist, MindWell Clinic</h4>
                                  <p class="text-slate-600 mt-2 text-sm">Delivered specialized CBT and developed innovative group therapy programs, improving patient outcomes and clinic service offerings.</p>
                              </div>
                              <!-- Item 3 -->
                               <div class="ml-8">
-                                 <div class="absolute -left-[13px] mt-2 w-6 h-6 bg-slate-50 rounded-full border-4 border-indigo-500"></div>
+                                 <div class="timeline-dot border-indigo-500"></div>
                                  <p class="text-sm text-gray-500">2014 - 2017</p>
                                  <h4 class="text-lg font-bold text-gray-900 mt-1">Lead Teacher & Curriculum Head, Future Leaders Academy</h4>
                                  <p class="text-slate-600 mt-2 text-sm">Pioneered a student-centric curriculum that led to a significant 15% rise in standardized test scores and student engagement.</p>
@@ -180,9 +130,9 @@
                         <h3 class="text-sm font-semibold tracking-widest uppercase mb-4 gradient-text">Get in Touch</h3>
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 max-w-xl">Have a project or opportunity you'd like to discuss?</h2>
                         <p class="mt-4 text-slate-600 max-w-xl">I'm always open to new challenges and collaborations. Let's connect and explore how we can work together.</p>
-                        <a href="mailto:your.email@example.com" class="inline-block bg-gradient-to-r from-fuchsia-500 to-indigo-600 text-white font-bold py-3 px-8 rounded-md mt-8 hover:shadow-lg hover:shadow-indigo-500/30 transition-shadow duration-300 transform hover:-translate-y-1">
-                           Email Me
-                        </a>
+                        <a href="mailto:your.email@example.com" class="btn">
+            Email Me
+        </a>
                      </div>
                 </section>
 
@@ -207,69 +157,6 @@
         </div>
     </header>
 
-    <script>
-        // --- Feather Icons Initialization ---
-        feather.replace();
-
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            // Close mobile menu when a link is clicked
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
-        
-        // --- Animate on Scroll ---
-        const scrollContent = document.querySelector('.main-content');
-        const animatedElements = document.querySelectorAll('.fade-in-up');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up-visible');
-                }
-            });
-        }, {
-            root: null, // observes intersections relative to the viewport
-            threshold: 0.1
-        });
-
-        animatedElements.forEach(el => {
-            observer.observe(el);
-        });
-
-        // --- Active Nav Link Highlighting on Scroll ---
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        if (scrollContent) {
-            scrollContent.addEventListener('scroll', () => {
-                let current = 'home'; // Default to home
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (scrollContent.scrollTop >= sectionTop - 200) { 
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-             // Set initial active link
-            document.querySelector('.nav-link[href="#home"]').classList.add('active');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
