@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Evelyn Reed | Internal Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#home" class="logo">Dr. Evelyn Reed</a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="btn btn-primary ml-4">Book Appointment</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <div class="p-4 border-t border-gray-100">
+                <a href="#contact" class="btn btn-primary w-full text-center">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="animate-on-scroll fade-in">
+                    <h1>Expert & Compassionate Internal Medicine</h1>
+                    <p>Providing comprehensive adult primary care with a focus on prevention, diagnosis, and management of complex health conditions.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-image animate-on-scroll fade-in-left">
+                        <img src="image.png" alt="Dr. Evelyn Reed" class="w-full">
+                    </div>
+                    <div class="about-content animate-on-scroll fade-in-right">
+                        <h2>Meet Dr. Evelyn Reed</h2>
+                        <p>Dr. Reed is a board-certified internist with over a decade of experience dedicated to adult healthcare. She earned her medical degree from Johns Hopkins University and is passionate about creating personalized health plans that empower her patients.</p>
+                        <p class="mt-4">Her approach is rooted in evidence-based medicine, clear communication, and a genuine commitment to the long-term well-being of every patient she serves.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i data-feather="award"></i>
+                                <span class="font-semibold">Board-Certified</span>
+                            </div>
+                            <div class="feature">
+                                <i data-feather="activity"></i>
+                                <span class="font-semibold">10+ Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="text-center animate-on-scroll fade-in">
+                    <h2 class="section-title">Our Medical Services</h2>
+                    <p class="section-subtitle">A focused range of services designed for comprehensive adult care.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card animate-on-scroll fade-in" style="transition-delay: 100ms;">
+                        <div class="service-icon">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3>Preventive Health</h3>
+                        <p>Annual wellness exams, health screenings, and risk assessments.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card animate-on-scroll fade-in" style="transition-delay: 200ms;">
+                        <div class="service-icon">
+                            <i data-feather="clock"></i>
+                        </div>
+                        <h3>Chronic Disease Care</h3>
+                        <p>Ongoing management of conditions like diabetes, hypertension, and asthma.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card animate-on-scroll fade-in" style="transition-delay: 300ms;">
+                        <div class="service-icon">
+                            <i data-feather="alert-circle"></i>
+                        </div>
+                        <h3>Acute Illness Diagnosis</h3>
+                        <p>Diagnosis and treatment for urgent but non-emergency conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Highlights Section -->
+        <section id="clinic" class="clinic">
+            <div class="container">
+                <div class="clinic-container">
+                    <div class="animate-on-scroll fade-in-left">
+                        <h2 class="section-title text-left">A Modern, Patient-First Facility</h2>
+                        <p class="mb-6">
+                            Our clinic combines a calm, welcoming atmosphere with advanced medical technology to ensure your comfort and provide the highest standard of care.
+                        </p>
+                    </div>
+                    <div class="animate-on-scroll fade-in-right">
+                        <div class="clinic-images">
+                            <div class="clinic-image">
+                                <img src="image.png" alt="Clinic Reception">
+                            </div>
+                            <div class="clinic-image">
+                                <img src="image.png" alt="Medical Technology">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="animate-on-scroll fade-in">
+                    <h2>Take the Next Step in Your Health Journey</h2>
+                    <p>We are accepting new patients. Contact us to schedule your consultation with Dr. Reed.</p>
+                    <div class="mt-10">
+                        <a href="mailto:contact@drevelynreed.com" class="btn btn-primary">
+                            Request An Appointment
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <p><span class="font-semibold">Phone:</span> <a href="tel:+1234567890" class="hover:text-blue-500">+1 (234) 567-890</a></p>
+                        <p class="mt-2"><span class="font-semibold">Location:</span> 150 Wellness Ave, Health City, ST 12345</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dr. Evelyn Reed | Internal Medicine.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i data-feather="twitter"></i></a>
+                <a href="#" class="social-link"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
