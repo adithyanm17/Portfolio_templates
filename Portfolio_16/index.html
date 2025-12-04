@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Emily Carter | Cardiology Specialist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">Dr. Emily Carter</a>
+            
+            <nav class="nav-desktop">
+                <a href="#about">About</a>
+                <a href="#specialties">Specialties</a>
+                <a href="#gallery">Clinic Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-desktop">
+                <div class="flex items-center">
+                    <i data-feather="phone" class="mr-2"></i>
+                    <a href="tel:+1234567890" class="font-semibold">+1 (234) 567-890</a>
+                </div>
+                <a href="#contact" class="btn btn-primary ml-6">
+                    Book Appointment
+                </a>
+            </div>
+
+            <button id="mobile-menu-button" class="lg:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden">
+            <a href="#about">About</a>
+            <a href="#specialties">Specialties</a>
+            <a href="#gallery">Clinic Gallery</a>
+            <a href="#contact">Contact</a>
+            <div class="p-4">
+                <a href="#contact" class="btn btn-primary w-full text-center">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in-up">
+                        <h1>Compassionate Heart Care, Uncompromised Expertise.</h1>
+                        <p class="mt-6">
+                            Welcome to a practice where patient well-being is the priority. Dr. Emily Carter combines years of dedicated experience with the latest in cardiac care to protect your heart's health.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+                            <a href="#about" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 200ms;">
+                        <img src="image.png" alt="Dr. Emily Carter" class="rounded-2xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section id="specialties" class="py-24">
+            <div class="container text-center">
+                <div class="fade-in-up">
+                    <span class="section-subtitle">Areas of Expertise</span>
+                    <h2 class="section-heading">Specialized Medical Services</h2>
+                    <p class="section-description">Providing a comprehensive range of cardiac services to diagnose, treat, and manage heart conditions with precision and care.</p>
+                </div>
+                <div class="specialty-grid">
+                    <!-- Specialty 1 -->
+                    <div class="specialty-card fade-in-up">
+                        <div class="specialty-icon">
+                            <i data-feather="activity"></i>
+                        </div>
+                        <h3>Preventive Cardiology</h3>
+                        <p>Proactive strategies and lifestyle management to reduce the risk of developing heart disease.</p>
+                    </div>
+                    <!-- Specialty 2 -->
+                    <div class="specialty-card fade-in-up" style="transition-delay: 150ms;">
+                        <div class="specialty-icon">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3>Coronary Artery Disease</h3>
+                        <p>Expert diagnosis and management of arterial blockages to restore blood flow and heart function.</p>
+                    </div>
+                    <!-- Specialty 3 -->
+                    <div class="specialty-card fade-in-up" style="transition-delay: 300ms;">
+                        <div class="specialty-icon">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <h3>Heart Failure Management</h3>
+                        <p>Comprehensive care plans to improve quality of life for patients with heart failure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Experience Section -->
+        <section id="about" class="py-24">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="fade-in-up about-image">
+                        <img src="image.png" alt="Dr. Carter in a professional setting">
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 200ms;">
+                        <span class="section-subtitle">About Dr. Carter</span>
+                        <h2 class="section-heading">A Commitment to Patient-Centered Care</h2>
+                        <p class="mb-6">
+                            Dr. Emily Carter is a board-certified cardiologist with over 15 years of experience in the field. She graduated with honors from Stanford University School of Medicine and completed her residency and fellowship at Johns Hopkins Hospital. Her philosophy is simple: treat every patient with the same dedication and compassion she would offer a family member.
+                        </p>
+                        <div class="experience-list">
+                            <h3 class="font-semibold text-white mb-4">Professional Experience</h3>
+                            <ul>
+                                <li class="experience-item">
+                                    <i data-feather="check-circle"></i>
+                                    <div>
+                                        <span class="font-semibold">Cardiologist, City Heart Center</span> (2015 - Present)
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <i data-feather="check-circle"></i>
+                                    <div>
+                                        <span class="font-semibold">Fellowship in Cardiology, Johns Hopkins</span> (2012 - 2015)
+                                    </div>
+                                </li>
+                                <li class="experience-item">
+                                    <i data-feather="check-circle"></i>
+                                    <div>
+                                        <span class="font-semibold">Residency, Johns Hopkins Hospital</span> (2009 - 2012)
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Gallery Section -->
+        <section id="gallery" class="py-24">
+            <div class="container">
+                <div class="text-center fade-in-up">
+                    <span class="section-subtitle">Our Facility</span>
+                    <h2 class="section-heading">A Modern & Welcoming Environment</h2>
+                    <p class="section-description">Our clinic is equipped with state-of-the-art technology in a comfortable and calming setting to ensure you feel at ease during your visit.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in-up">
+                        <img src="image.png" alt="Clinic Reception">
+                    </div>
+                    <div class="gallery-item fade-in-up" style="transition-delay: 150ms;">
+                        <img src="image.png" alt="Examination Room">
+                    </div>
+                    <div class="gallery-item fade-in-up" style="transition-delay: 300ms;">
+                        <img src="image.png" alt="Medical Technology">
+                    </div>
+                    <div class="gallery-item fade-in-up" style="transition-delay: 450ms;">
+                        <img src="image.png" alt="Waiting Area">
+                    </div>
+                    <div class="gallery-item fade-in-up" style="transition-delay: 600ms;">
+                        <img src="image.png" alt="Clinic Staff">
+                    </div>
+                    <div class="gallery-item fade-in-up" style="transition-delay: 750ms;">
+                        <img src="image.png" alt="Clinic Exterior">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="container text-center">
+                <div class="fade-in-up">
+                    <h2 class="section-heading">Ready to Schedule Your Visit?</h2>
+                    <p class="section-description">Contact us today to book your appointment. Our team is ready to assist you with your healthcare needs. We look forward to welcoming you.</p>
+                    <div class="contact-info">
+                        <i data-feather="phone-call"></i>
+                        <a href="tel:+1234567890" class="text-lg">+1 (234) 567-890</a>
+                    </div>
+                    <div class="mt-6">
+                        <a href="mailto:contact@dremilycarter.com" class="btn btn-primary">
+                            Book Your Appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container py-12 text-center">
+            <p>&copy; 2024 Dr. Emily Carter. All Rights Reserved.</p>
+            <p class="text-sm mt-2">123 Health St, Medville, ST 12345</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
