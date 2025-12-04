@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Olivia Chen | Pediatrics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Dr. Olivia Chen</a>
+            
+            <nav class="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#clinic">Clinic</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clinic">Clinic</a>
+            <a href="#contact">Contact</a>
+            <div class="mobile-menu-cta">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal-element">
+                    <h1>Caring for Your Child's Health, <span class="text-primary">Every Step of the Way.</span></h1>
+                    <p>Dr. Olivia Chen is a dedicated pediatrician committed to providing exceptional care for children from infancy through adolescence.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+                        <div class="phone-cta">
+                            <i data-feather="phone" class="icon"></i>
+                            <a href="tel:+1234567890" class="phone-link">+1 (234) 567-890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image reveal-element">
+                    <img src="images/doctor.jpg" alt="Dr. Olivia Chen">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <h2>A Passion for Pediatric Care</h2>
+                    <div class="divider"></div>
+                    <p>With over 12 years of experience, Dr. Chen combines medical expertise with a warm, personal approach. She believes in building lasting relationships with families, creating a foundation of trust to ensure every child receives the best possible care. She is a graduate of Columbia University's College of Physicians and Surgeons and is board-certified in Pediatrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header center reveal-element">
+                    <h2>Our Pediatric Services</h2>
+                    <p>We offer a full spectrum of services to support your child's health and development.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal-element">
+                        <i data-feather="smile" class="service-icon"></i>
+                        <h3>Well-Child Visits</h3>
+                        <p>Routine check-ups to monitor growth, development, and administer vaccinations.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card reveal-element">
+                        <i data-feather="thermometer" class="service-icon"></i>
+                        <h3>Sick Visits & Acute Care</h3>
+                        <p>Prompt diagnosis and treatment for common childhood illnesses and injuries.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card reveal-element">
+                        <i data-feather="star" class="service-icon"></i>
+                        <h3>Developmental Screenings</h3>
+                        <p>Assessing developmental milestones to ensure your child is on the right track.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clinic Highlights Section -->
+        <section id="clinic" class="clinic">
+            <div class="container clinic-container">
+                <div class="clinic-content reveal-element">
+                    <h2>A Welcoming Space for Children</h2>
+                    <div class="divider left"></div>
+                    <p>Our clinic is designed to be a comfortable and friendly environment for children and parents alike. From our bright waiting area to our child-friendly examination rooms, we strive to make every visit a positive experience.</p>
+                </div>
+                <div class="clinic-gallery">
+                    <div class="gallery-item reveal-element">
+                        <img src="images/play-area.jpg" alt="Play Area">
+                    </div>
+                    <div class="gallery-item reveal-element">
+                        <img src="images/exam-room.jpg" alt="Exam Room">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header center reveal-element">
+                    <h2>Schedule Your Child's Visit Today</h2>
+                    <p>We are currently accepting new patients. Contact our office to schedule your first appointment and join our family of care.</p>
+                    <div class="contact-cta">
+                        <a href="mailto:contact@droliviachen.com" class="btn btn-primary">Book Your Appointment</a>
+                    </div>
+                    <div class="contact-info">
+                        <p><span class="font-semibold">Phone:</span> +1 (234) 567-890</p>
+                        <p><span class="font-semibold">Address:</span> 789 Children's Way, Suite 101, Healthville, ST 12345</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dr. Olivia Chen | Pediatric Care.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
