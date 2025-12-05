@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Carter | Aerospace Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Liam Carter</a>
+            
+            <nav class="desktop-nav">
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact" class="contact-btn">Contact Me</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text reveal">
+                        <h1>Aerospace Engineer Crafting the Future of Flight.</h1>
+                        <p>Specializing in aerodynamics and propulsion systems, I design and analyze solutions that push the boundaries of performance and efficiency.</p>
+                        <div class="hero-buttons">
+                            <a href="./resume.pdf" download class="btn-primary">
+                                <i data-feather="download"></i>
+                                <span>Download CV</span>
+                            </a>
+                            <a href="mailto:liam.carter@example.com" class="btn-secondary">
+                                <i data-feather="mail"></i>
+                                <span>Send an Email</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image reveal" style="transition-delay: 150ms;">
+                        <div class="image-container">
+                            <img src="image.png" alt="Liam Carter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>I'm an aerospace engineer with a passion for solving complex aerodynamic challenges. My experience spans from conceptual design in R&D to hands-on testing and validation. I thrive on translating theoretical models into real-world applications that perform reliably under extreme conditions. Holding a Ph.D. from Caltech, I am dedicated to a career of innovation and excellence in aerospace engineering.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Areas of Expertise</h2>
+                </div>
+                <div class="skills-grid">
+                    <!-- Category 1 -->
+                    <div class="skill-category reveal">
+                        <h3>Design & Analysis</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Aerodynamics</span>
+                            <span class="skill-tag">Propulsion Systems</span>
+                            <span class="skill-tag">CFD</span>
+                            <span class="skill-tag">Structural Analysis</span>
+                        </div>
+                    </div>
+                    <!-- Category 2 -->
+                    <div class="skill-category reveal">
+                        <h3>Software & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ANSYS Fluent</span>
+                            <span class="skill-tag">CATIA</span>
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                    <!-- Category 3 -->
+                    <div class="skill-category reveal">
+                        <h3>Methodologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Systems Engineering</span>
+                            <span class="skill-tag">Agile Development</span>
+                            <span class="skill-tag">Wind Tunnel Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Career Progression</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item reveal">
+                        <p class="timeline-date">2019 - Present</p>
+                        <h3>Senior Propulsion Engineer, AstroDynamics</h3>
+                        <p>Leading the design of next-generation rocket engines. Improved fuel efficiency by 12% through advanced CFD modeling and material selection.</p>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="timeline-item reveal">
+                        <p class="timeline-date">2016 - 2019</p>
+                        <h3>Aerodynamics Engineer, AeroVenture</h3>
+                        <p>Developed and validated aerodynamic models for hypersonic vehicles. Authored 3 peer-reviewed papers on boundary layer analysis.</p>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="timeline-item reveal">
+                        <p class="timeline-date">2014 - 2016</p>
+                        <h3>Research Assistant, Caltech GALCIT</h3>
+                        <p>Conducted experimental research in the T5 Hypervelocity Shock Tunnel, contributing to foundational research in high-speed flight.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="image.png" alt="Project Hyperion">
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Hyperion Engine</h3>
+                            <p>Led the design and successful test-firing of a prototype methalox staged-combustion rocket engine, achieving a record thrust-to-weight ratio.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="image.png" alt="Aero-Thermal Modeling">
+                        </div>
+                        <div class="project-content">
+                            <h3>Aero-Thermal Modeling System</h3>
+                            <p>Developed a high-fidelity computational model to predict thermal loads on hypersonic vehicle control surfaces, adopted as a new standard at AeroVenture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content reveal">
+                    <h2>Let's Connect</h2>
+                    <p>I am always interested in discussing new challenges in aerospace. If you'd like to collaborate or have an opportunity in mind, please reach out.</p>
+                    <div class="contact-btn-container">
+                        <a href="mailto:liam.carter@example.com" class="btn-primary">
+                            Send an Email
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="social-link"><i data-feather="github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Liam Carter | Aerospace Engineer.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+</body>
+</html>
