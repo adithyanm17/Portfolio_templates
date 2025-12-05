@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Grant | Software Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Alex Grant</a>
+            
+            <nav class="nav-desktop">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact" class="btn btn-primary ml-4">Contact Me</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-button lg-hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg-hidden">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1>Software Engineer Building <span class="gradient-text">Scalable Solutions</span></h1>
+                    <p class="mt-6">
+                        I design and build high-performance software applications that are intuitive, efficient, and built to last.
+                    </p>
+                    <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="resume.pdf" download class="btn btn-amber">
+                            <i data-feather="download" class="w-5 h-5"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="mailto:alex.grant@example.com" class="btn btn-secondary">
+                            <i data-feather="mail" class="w-5 h-5"></i>
+                            <span>Send an Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <div class="container about-grid">
+                <div class="reveal">
+                    <img src="alex-grant.jpg" alt="Alex Grant" class="rounded-2xl shadow-xl w-full h-auto">
+                </div>
+                <div class="reveal" style="--stagger-delay: 150ms;">
+                    <span class="font-semibold text-primary-green">A LITTLE ABOUT ME</span>
+                    <h2 class="mt-4">Creative Problem Solver, Passionate Developer</h2>
+                    <p class="mt-6">
+                        With a background in computer science from Carnegie Mellon University, I've spent the last 7 years crafting elegant code and architecting robust systems for startups and large enterprises. My passion lies at the intersection of user experience and backend performance.
+                    </p>
+                    <p class="mt-4">
+                        I believe in writing clean, testable code and fostering a culture of collaboration and continuous improvement. When I'm not coding, I enjoy contributing to open-source projects and mentoring aspiring developers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-light">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto reveal">
+                    <h2>Core Competencies</h2>
+                    <p class="mt-4">The technologies and methodologies I use to bring ideas to life.</p>
+                </div>
+                <div class="skills-grid stagger-children">
+                    <!-- Category 1 -->
+                    <div class="skill-card reveal" style="--stagger-delay: 100ms;">
+                        <i data-feather="code" class="w-10 h-10 text-primary"></i>
+                        <h3 class="mt-5">Languages</h3>
+                        <p class="mt-2">JavaScript/TypeScript, Python, Go, Java</p>
+                    </div>
+                    <!-- Category 2 -->
+                    <div class="skill-card reveal" style="--stagger-delay: 200ms;">
+                        <i data-feather="server" class="w-10 h-10 text-primary"></i>
+                        <h3 class="mt-5">Backend & Databases</h3>
+                        <p class="mt-2">Node.js, Express, PostgreSQL, MongoDB, Redis</p>
+                    </div>
+                    <!-- Category 3 -->
+                    <div class="skill-card reveal" style="--stagger-delay: 300ms;">
+                        <i data-feather="layout" class="w-10 h-10 text-primary"></i>
+                        <h3 class="mt-5">Frontend & DevOps</h3>
+                        <p class="mt-2">React, Next.js, Docker, AWS, CI/CD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+            <div class="container">
+                <div class="max-w-3xl mx-auto reveal">
+                    <h2 class="text-center">Career Timeline</h2>
+                </div>
+                <div class="mt-16 max-w-3xl mx-auto">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-primary font-semibold">2020 - Present</p>
+                        <h3>Lead Software Engineer, TechFlow Solutions</h3>
+                        <p class="mt-2">Architected and led the development of a multi-tenant SaaS platform, reducing latency by 40%. Mentored a team of 5 engineers, improving code quality and deployment frequency.</p>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-primary font-semibold">2017 - 2020</p>
+                        <h3>Senior Software Engineer, DataCorp</h3>
+                        <p class="mt-2">Developed data processing pipelines that handled over 1 billion events per day. Implemented a new API gateway, enhancing security and developer experience.</p>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <p class="text-primary font-semibold">2015 - 2017</p>
+                        <h3>Software Engineer, AppStart Inc.</h3>
+                        <p class="mt-2">Contributed to the core features of a flagship mobile application, helping to grow the user base from 100k to 2 million.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-24 bg-light">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto reveal">
+                    <h2>Signature Projects & Achievements</h2>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+                    <!-- Achievement 1 -->
+                    <div class="skill-card reveal" style="--stagger-delay: 100ms;">
+                        <h3>SaaS Platform Architecture</h3>
+                        <p class="mt-2">Designed a microservices-based architecture that supported a 10x growth in user traffic while maintaining 99.99% uptime.</p>
+                    </div>
+                    <!-- Achievement 2 -->
+                    <div class="skill-card reveal" style="--stagger-delay: 200ms;">
+                        <h3>Open Source Contributor</h3>
+                        <p class="mt-2">Key contributor to the popular 'Async-Utils' library, with merged PRs improving performance for thousands of developers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="container text-center">
+                <div class="max-w-2xl mx-auto reveal">
+                    <h2>Let's Connect</h2>
+                    <p class="mt-6">I'm excited to hear about new opportunities and collaborations. If you have a project in mind or just want to say hello, feel free to get in touch.</p>
+                    <div class="mt-10">
+                        <a href="mailto:alex.grant@example.com" class="btn btn-amber btn-lg">
+                            Send me an Email
+                        </a>
+                    </div>
+                    <div class="mt-8 flex justify-center gap-6">
+                        <a href="#" class="text-gray-500 hover:text-gray-800"><i data-feather="linkedin" class="w-7 h-7"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-800"><i data-feather="github" class="w-7 h-7"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white border-t border-gray-200">
+        <div class="container py-8 text-center text-gray-500">
+            <p>&copy; 2024 Alex Grant | Software Engineer.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
