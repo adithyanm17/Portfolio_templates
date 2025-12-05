@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Samuel Carter | General Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Dr. Samuel Carter</a>
+            
+            <nav class="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn btn-primary mobile-appointment-btn">Book Appointment</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text reveal visible">
+                        <span class="subtitle">DR. SAMUEL CARTER, M.D.</span>
+                        <h1>Your Partner in Lifelong Health.</h1>
+                        <p>Providing trusted, patient-centered primary care. We focus on understanding you to deliver the best health outcomes.</p>
+                    </div>
+                    <div class="appointment-box reveal visible">
+                        <h3>Book Your Consultation</h3>
+                        <p>New patients are welcome. Schedule your visit today.</p>
+                        <a href="#contact" class="btn btn-accent">Request Appointment</a>
+                        <p class="contact-phone">Or call us at <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container about-container">
+                <div class="about-image reveal">
+                    <img src="image.png" alt="Dr. Samuel Carter">
+                </div>
+                <div class="about-text reveal">
+                    <h2>A Modern Approach to Primary Care</h2>
+                    <p>Dr. Carter believes that great healthcare starts with a great relationship. With a decade of experience from Duke University Health System, he combines deep medical knowledge with a personal commitment to each patient's journey.</p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-number">1</div>
+                            <div class="feature-content">
+                                <h4>We Listen</h4>
+                                <p>We take the time to hear your story and understand your health goals.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">2</div>
+                            <div class="feature-content">
+                                <h4>We Diagnose</h4>
+                                <p>Using modern diagnostics, we get to the root of your health concerns.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">3</div>
+                            <div class="feature-content">
+                                <h4>We Partner</h4>
+                                <p>We create a personalized health plan with you, not for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Comprehensive Health Services</h2>
+                    <p>From routine check-ups to managing complex conditions, we've got you covered.</p>
+                </div>
+                <div class="accordion reveal">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Preventive Care & Wellness</span>
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Annual physicals, immunizations, and personalized health screenings to proactively manage your well-being and prevent future health issues.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Chronic Disease Management</span>
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Expert, ongoing care for conditions such as diabetes, high blood pressure, and heart disease, with a focus on improving your quality of life.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Acute Illness & Injury</span>
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Timely diagnosis and treatment for common illnesses like the flu, infections, and minor injuries to get you back on your feet quickly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-container reveal">
+                    <div class="contact-info">
+                        <h2>Ready to Begin?</h2>
+                        <p>Our office is conveniently located and we are currently accepting new patients. Reach out to schedule your first visit.</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-map-marker-alt"></i> 400 Health Plaza, Medville, ST</p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:office@drsamuelcarter.com">office@drsamuelcarter.com</a></p>
+                        </div>
+                    </div>
+                    <div class="hours">
+                        <h3>Office Hours</h3>
+                        <ul>
+                            <li><span>Monday - Thursday</span> <strong>9am - 5pm</strong></li>
+                            <li><span>Friday</span> <strong>9am - 3pm</strong></li>
+                            <li><span>Saturday & Sunday</span> <strong>Closed</strong></li>
+                        </ul>
+                        <a href="mailto:office@drsamuelcarter.com" class="btn btn-primary">Send Us an Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dr. Samuel Carter | General Practice.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
