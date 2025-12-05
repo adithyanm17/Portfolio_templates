@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Isabella Rossi | Family Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">Dr. Isabella Rossi</a>
+            
+            <nav class="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#contact" class="btn btn-primary">
+                Book Appointment
+            </a>
+
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <div class="mobile-menu-footer">
+                 <a href="#contact" class="btn btn-primary btn-mobile">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="image.png" alt="Dr. Isabella Rossi" class="profile-image reveal">
+                    <h1 class="reveal" style="transition-delay: 100ms;">
+                        Dedicated Care, Healthier Futures.
+                    </h1>
+                    <p class="reveal" style="transition-delay: 200ms;">
+                        Dr. Isabella Rossi offers compassionate and comprehensive family medicine for all stages of life.
+                    </p>
+                    <div class="reveal" style="transition-delay: 300ms;">
+                        <a href="#contact" class="btn btn-primary btn-large">Book an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content reveal">
+                    <h2>A Doctor Who Listens</h2>
+                    <p>
+                        With a belief that the best care comes from understanding the whole person, Dr. Rossi focuses on building lasting relationships with her patients. A graduate of Northwestern University Feinberg School of Medicine, she brings over 12 years of experience to her practice. She is committed to providing a welcoming environment where you can feel heard, understood, and confident in your healthcare.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                     <h2>Our Medical Services</h2>
+                     <p>Providing a full range of family medicine services.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal" style="--stagger-delay: 100ms;">
+                        <div class="service-icon">
+                            <i data-feather="users"></i>
+                        </div>
+                        <h3>Family & Pediatric Care</h3>
+                        <p>Comprehensive healthcare for every member of your family, from infants to seniors.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card reveal" style="--stagger-delay: 200ms;">
+                        <div class="service-icon">
+                           <i data-feather="shield"></i>
+                        </div>
+                        <h3>Preventive Medicine</h3>
+                        <p>Focusing on wellness exams and screenings to prevent illness before it starts.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card reveal" style="--stagger-delay: 300ms;">
+                        <div class="service-icon">
+                            <i data-feather="clipboard"></i>
+                        </div>
+                        <h3>Health Management</h3>
+                        <p>Personalized plans for managing chronic conditions like diabetes and asthma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <h2>Take the First Step to Better Health</h2>
+                    <p>Our office is ready to welcome you. Call us or use the button below to schedule your first appointment with Dr. Rossi.</p>
+                    <div class="contact-cta">
+                        <a href="mailto:contact@drrossi.com" class="btn btn-primary btn-large">
+                           Request An Appointment
+                        </a>
+                    </div>
+                     <div class="contact-info">
+                        <p><i data-feather="phone"></i><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        <p><i data-feather="map-pin"></i><span>500 Health Way, Suite 10, Medville</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dr. Isabella Rossi | Family Medicine.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
