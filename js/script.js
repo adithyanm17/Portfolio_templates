@@ -56,30 +56,86 @@ document.addEventListener('DOMContentLoaded', function() {
             : templates.filter(template => template.category === currentFilter);
         
         filteredTemplates.forEach(template => {
+            // Create template card with sanitized content
             const templateCard = document.createElement('div');
             templateCard.className = 'template-card';
             templateCard.dataset.category = template.category;
             
-            templateCard.innerHTML = `
-                <div class="template-preview">
-                    <img src="${template.thumbnail}" alt="${template.name} Preview" onerror="this.src='https://via.placeholder.com/300x225?text=No+Preview'">
-                </div>
-                <div class="template-info">
-                    <h3>${template.name}</h3>
-                    <span class="template-category category-${template.category}">
-                        ${template.category.charAt(0).toUpperCase() + template.category.slice(1)}
-                    </span>
-                </div>
-            `;
+            // Create preview container
+            const previewDiv = document.createElement('div');
+            previewDiv.className = 'template-preview';
             
+            // Create image element for thumbnail
+            const img = document.createElement('img');
+            img.src = template.thumbnail || 'https://via.placeholder.com/300x225?text=No+Preview';
+            img.alt = `${template.name} Preview`;
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/300x225?text=No+Preview';
+            };
+            
+            // Create info container
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'template-info';
+            
+            // Create title
+            const title = document.createElement('h3');
+            title.textContent = template.name;
+            
+            // Create category badge
+            const categorySpan = document.createElement('span');
+            categorySpan.className = `template-category category-${template.category}`;
+            categorySpan.textContent = template.category.charAt(0).toUpperCase() + template.category.slice(1);
+            
+            // Assemble the card
+            previewDiv.appendChild(img);
+            infoDiv.appendChild(title);
+            infoDiv.appendChild(categorySpan);
+            templateCard.appendChild(previewDiv);
+            templateCard.appendChild(infoDiv);
+            
+            // Add click handler
             templateCard.addEventListener('click', () => openModal(template));
+            
+            // Add to container
             templatesContainer.appendChild(templateCard);
         });
     }
     
     // Open modal with template preview
     function openModal(template) {
-        templateFrame.src = template.path;
+        // Create a sandboxed iframe to prevent script execution
+        const sandboxAttrs = [
+            'allow-same-origin',
+            'allow-scripts',
+            'allow-forms',
+            'allow-modals',
+            'allow-popups',
+            'allow-presentation'
+        ];
+        
+        // Clear previous iframe and create a new one
+        const newIframe = document.createElement('iframe');
+        newIframe.id = 'templateFrame';
+        newIframe.sandbox = sandboxAttrs.join(' ');
+        newIframe.allow = 'fullscreen';
+        newIframe.style.width = '100%';
+        newIframe.style.height = '100%';
+        newIframe.style.border = 'none';
+        
+        // Replace the iframe in the DOM
+        const previewContainer = document.querySelector('.preview-container');
+        const oldIframe = document.getElementById('templateFrame');
+        if (oldIframe) {
+            previewContainer.replaceChild(newIframe, oldIframe);
+        } else {
+            previewContainer.appendChild(newIframe);
+        }
+        
+        // Set the source after a small delay to ensure the iframe is in the DOM
+        setTimeout(() => {
+            newIframe.src = template.path;
+        }, 100);
+        
         viewLiveBtn.href = template.path;
         
         // Update download button with current template info
@@ -126,11 +182,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function downloadTemplate(templatePath, templateName) {
         // Create a temporary link element
         const link = document.createElement('a');
-        link.href = templatePath;
-        link.download = `${templateName}.zip`; // You'll need to create zip files for each template
+        
+        // Convert template path to zip file path
+        // Example: 'Portfolio_1/index.html' -> 'downloads/Portfolio_1.zip'
+        const zipPath = `downloads/${templatePath.split('/')[0]}.zip`;
+        
+        link.href = zipPath;
+        link.download = `${templateName}.zip`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
+        // If the file doesn't exist, show an error after a short delay
+        setTimeout(() => {
+            if (!link.visited) {
+                alert('Download failed. The template zip file was not found.');
+            }
+        }, 2000);
     }
     
     // Add download button event listener
