@@ -71,9 +71,12 @@ header h1 {
 /* Templates Grid */
 .templates-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .template-card {
