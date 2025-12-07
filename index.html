@@ -33,16 +33,87 @@
         </div>
     </header>
 
-    <div class="filters">
-        <button class="filter-btn active" data-filter="all">All Templates</button>
-        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-        <button class="filter-btn" data-filter="restaurant">Restaurant</button>
-        <button class="filter-btn" data-filter="textile">Textile</button>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About PickWEB</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to PickWEB, your one-stop destination for high-quality website templates. We offer a wide range of professionally designed templates for various purposes, including portfolios, restaurants, and textile businesses.</p>
+                    <p>Our mission is to help you create stunning websites quickly and easily, without the need for extensive coding knowledge. All our templates are fully responsive, SEO-friendly, and easy to customize.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Fully Responsive</h3>
+                        <p>Looks great on all devices</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Easy to Customize</h3>
+                        <p>Change colors and content easily</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Loading</h3>
+                        <p>Optimized for performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="templates-container container" id="templatesContainer">
-        <!-- Templates will be dynamically loaded here -->
-    </div>
+    <!-- Templates Section -->
+    <section id="templates" class="section bg-light">
+        <div class="container">
+            <h2>Our Templates</h2>
+            <p class="section-description">Browse our collection of beautiful, responsive templates</p>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Templates</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+                <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+                <button class="filter-btn" data-filter="textile">Textile</button>
+            </div>
+
+            <div class="templates-container" id="templatesContainer">
+                <!-- Templates will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> contact@pickweb.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Web Street, Internet City</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <div id="previewModal" class="modal">
         <div class="modal-content">
@@ -64,9 +135,43 @@
         </div>
     </div>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 PickWEB. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PickWEB</h3>
+                    <p>Your one-stop destination for high-quality website templates. Create stunning websites quickly and easily.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Template Categories</h3>
+                    <ul>
+                        <li><a href="#" data-filter="portfolio">Portfolio</a></li>
+                        <li><a href="#" data-filter="restaurant">Restaurant</a></li>
+                        <li><a href="#" data-filter="textile">Textile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new templates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PickWEB. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
         </div>
     </footer>
 
