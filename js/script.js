@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Portfolio ${i}`,
             category: 'portfolio',
             path: `Portfolio_${i}/index.html`,
-            thumbnail: `Portfolio_${i}/screenshot.jpg` // You'll need to add these screenshots
+            thumbnail: `Portfolio_${i}/image.png`
         });
     }
     
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Restaurant ${i}`,
             category: 'restaurant',
             path: `Resturant_template_${i}/index.html`,
-            thumbnail: `Resturant_template_${i}/screenshot.jpg`
+            thumbnail: `Resturant_template_${i}/image.png`
         });
     }
     
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Textile ${i}`,
             category: 'textile',
             path: `Textile_template_${i}/index.html`,
-            thumbnail: `Textile_template_${i}/screenshot.jpg`
+            thumbnail: `Textile_template_${i}/image.png`
         });
     }
 
