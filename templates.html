@@ -166,12 +166,53 @@
                     const previewDiv = document.createElement('div');
                     previewDiv.className = 'template-preview';
                     
-                    const img = document.createElement('img');
-                    img.src = template.thumbnail || 'https://via.placeholder.com/300x225?text=No+Preview';
-                    img.alt = `${template.name} Preview`;
-                    img.onerror = function() {
-                        this.src = 'https://via.placeholder.com/300x225?text=No+Preview';
+                    // Create container for the iframe with overlay
+                    const previewContainer = document.createElement('div');
+                    previewContainer.className = 'template-iframe-container';
+                    previewContainer.style.position = 'relative';
+                    previewContainer.style.width = '100%';
+                    previewContainer.style.height = '100%';
+                    previewContainer.style.overflow = 'hidden';
+                    previewContainer.style.borderRadius = '8px 8px 0 0';
+                    
+                    // Create iframe for web preview
+                    const iframe = document.createElement('iframe');
+                    iframe.src = template.path;
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.border = 'none';
+                    iframe.style.transform = 'scale(0.3)';
+                    iframe.style.transformOrigin = '0 0';
+                    iframe.style.pointerEvents = 'none'; // Disable interaction with the iframe
+                    
+                    // Add loading overlay
+                    const loadingOverlay = document.createElement('div');
+                    loadingOverlay.className = 'loading-overlay';
+                    loadingOverlay.style.position = 'absolute';
+                    loadingOverlay.style.top = '0';
+                    loadingOverlay.style.left = '0';
+                    loadingOverlay.style.width = '100%';
+                    loadingOverlay.style.height = '100%';
+                    loadingOverlay.style.display = 'flex';
+                    loadingOverlay.style.justifyContent = 'center';
+                    loadingOverlay.style.alignItems = 'center';
+                    loadingOverlay.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+                    loadingOverlay.innerHTML = '<div class="spinner"></div>';
+                    
+                    // When iframe loads, remove the loading overlay
+                    iframe.onload = function() {
+                        loadingOverlay.style.display = 'none';
                     };
+                    
+                    // If iframe fails to load, show error
+                    iframe.onerror = function() {
+                        loadingOverlay.innerHTML = 'Preview not available';
+                        loadingOverlay.style.backgroundColor = '#f8f9fa';
+                    };
+                    
+                    previewContainer.appendChild(iframe);
+                    previewContainer.appendChild(loadingOverlay);
+                    previewDiv.appendChild(previewContainer);
                     
                     const infoDiv = document.createElement('div');
                     infoDiv.className = 'template-info';
@@ -182,8 +223,6 @@
                     const categorySpan = document.createElement('span');
                     categorySpan.className = `template-category category-${template.category}`;
                     categorySpan.textContent = template.category.charAt(0).toUpperCase() + template.category.slice(1);
-                    
-                    previewDiv.appendChild(img);
                     infoDiv.appendChild(title);
                     infoDiv.appendChild(categorySpan);
                     templateCard.appendChild(previewDiv);
