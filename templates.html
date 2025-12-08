@@ -173,6 +173,10 @@
                     previewContainer.style.width = '100%';
                     previewContainer.style.height = '100%';
                     previewContainer.style.overflow = 'hidden';
+                    previewContainer.style.position = 'relative';
+                    previewContainer.style.width = '100%';
+                    previewContainer.style.height = '0';
+                    previewContainer.style.paddingBottom = '75%'; // 4:3 aspect ratio
                     previewContainer.style.borderRadius = '8px 8px 0 0';
                     
                     // Create iframe for web preview
@@ -181,8 +185,15 @@
                     iframe.style.width = '100%';
                     iframe.style.height = '100%';
                     iframe.style.border = 'none';
-                    iframe.style.transform = 'scale(0.3)';
-                    iframe.style.transformOrigin = '0 0';
+                    // Scale the iframe to be larger in the preview
+                    iframe.style.transform = 'scale(0.5)';
+                    // Center the scaled iframe in the container
+                    iframe.style.transformOrigin = 'top left';
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '200%';
+                    iframe.style.height = '200%';
                     iframe.style.pointerEvents = 'none'; // Disable interaction with the iframe
                     
                     // Add loading overlay
