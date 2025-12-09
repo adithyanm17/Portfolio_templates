@@ -1,3 +1,25 @@
+// Utility function to load images with fallback
+function loadImage(img, src, fallback) {
+    if (!img || !(img instanceof HTMLImageElement)) return;
+    
+    img.onerror = () => {
+        if (src === fallback || !fallback) {
+            img.src = 'https://placehold.co/300x225?text=Template+Image';
+            img.alt = 'Template preview not available';
+        } else {
+            img.src = fallback;
+        }
+    };
+    
+    img.onload = () => {
+        img.style.opacity = 1;
+    };
+    
+    img.src = src;
+    img.style.opacity = 0;
+    img.style.transition = 'opacity 0.3s ease';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Templates data - we'll dynamically generate this from the folders
     const templates = [];
@@ -67,26 +89,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const templateCard = document.createElement('div');
             templateCard.className = 'template-card';
             
-            // Create image with error handling
-            const img = document.createElement('img');
-            img.alt = template.name;
-            img.loading = 'lazy';
-            
-            // Set up image loading with fallback
-            const loadImage = (src, fallback) => {
-                img.onerror = () => {
-                    if (src !== fallback) {
-                        img.src = fallback || 'https://via.placeholder.com/300x225?text=No+Preview';
-                    } else {
-                        img.src = 'https://via.placeholder.com/300x225?text=No+Preview';
-                    }
-                };
-                img.src = src;
-            };
-            
             // Create the card structure
             const previewDiv = document.createElement('div');
             previewDiv.className = 'template-preview';
+            
+            // Create image with error handling
+            const img = document.createElement('img');
+            img.alt = template.name || 'Template preview';
+            img.loading = 'lazy';
+            img.style.width = '100%';
+            img.style.height = 'auto';
             
             const infoDiv = document.createElement('div');
             infoDiv.className = 'template-info';
@@ -100,15 +112,19 @@ document.addEventListener('DOMContentLoaded', function() {
             categorySpan.className = `template-category category-${template.category}`;
             categorySpan.textContent = template.category.charAt(0).toUpperCase() + template.category.slice(1);
             
-            // Try to load the fallback thumbnail first, then fall back to the placeholder
-            loadImage(template.fallbackThumbnail || template.thumbnail, template.thumbnail || 'https://via.placeholder.com/300x225?text=No+Preview');
+            // Load the image with fallback
+            loadImage(img, template.thumbnail || template.fallbackThumbnail, 'https://placehold.co/300x225?text=Template+Image');
             
             // Assemble the card
             previewDiv.appendChild(img);
             infoDiv.appendChild(title);
             infoDiv.appendChild(categorySpan);
-            templateCard.appendChild(previewDiv);
-            templateCard.appendChild(infoDiv);
+            
+            // Only append if elements exist
+            if (previewDiv && infoDiv) {
+                templateCard.appendChild(previewDiv);
+                templateCard.appendChild(infoDiv);
+            }
             
             // Add click handler
             templateCard.addEventListener('click', () => openModal(template));
@@ -248,11 +264,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (!anchor) return;
+        
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
+    
+    // Log initialization
+    console.log('Portfolio website initialized successfully!');
 });
