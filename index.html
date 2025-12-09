@@ -161,6 +161,19 @@
         </div>
     </footer>
 
+    <!-- Load Feather Icons with fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        // Initialize Feather Icons with error handling
+        if (typeof feather !== 'undefined') {
+            try {
+                feather.replace({ class: 'feather-icon' });
+            } catch (e) {
+                console.error('Error initializing Feather Icons:', e);
+            }
+        }
+    </script>
+
     <script src="js/script.js"></script>
     <script>
         // Mobile menu toggle functionality

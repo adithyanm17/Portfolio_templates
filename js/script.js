@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Portfolio ${i}`,
             category: 'portfolio',
             path: `Portfolio_${i}/index.html`,
-            thumbnail: `Portfolio_${i}/image.png`
+            thumbnail: `https://via.placeholder.com/300x225?text=Portfolio+${i}`,
+            fallbackThumbnail: `Portfolio_${i}/image.png`
         });
     }
     
@@ -20,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Restaurant ${i}`,
             category: 'restaurant',
             path: `Resturant_template_${i}/index.html`,
-            thumbnail: `Resturant_template_${i}/image.png`
+            thumbnail: `https://via.placeholder.com/300x225?text=Restaurant+${i}`,
+            fallbackThumbnail: `Resturant_template_${i}/image.png`
         });
     }
     
@@ -31,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
             name: `Textile ${i}`,
             category: 'textile',
             path: `Textile_template_${i}/index.html`,
-            thumbnail: `Textile_template_${i}/image.png`
+            thumbnail: `https://via.placeholder.com/300x225?text=Textile+${i}`,
+            fallbackThumbnail: `Textile_template_${i}/image.png`
         });
     }
 
@@ -49,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Display templates
     function displayTemplates() {
+        if (!templatesContainer) {
+            console.error('Templates container not found');
+            return;
+        }
         templatesContainer.innerHTML = '';
         
         const filteredTemplates = currentFilter === 'all' 
@@ -59,21 +66,28 @@ document.addEventListener('DOMContentLoaded', function() {
             // Create template card with sanitized content
             const templateCard = document.createElement('div');
             templateCard.className = 'template-card';
-            templateCard.dataset.category = template.category;
             
-            // Create preview container
+            // Create image with error handling
+            const img = document.createElement('img');
+            img.alt = template.name;
+            img.loading = 'lazy';
+            
+            // Set up image loading with fallback
+            const loadImage = (src, fallback) => {
+                img.onerror = () => {
+                    if (src !== fallback) {
+                        img.src = fallback || 'https://via.placeholder.com/300x225?text=No+Preview';
+                    } else {
+                        img.src = 'https://via.placeholder.com/300x225?text=No+Preview';
+                    }
+                };
+                img.src = src;
+            };
+            
+            // Create the card structure
             const previewDiv = document.createElement('div');
             previewDiv.className = 'template-preview';
             
-            // Create image element for thumbnail
-            const img = document.createElement('img');
-            img.src = template.thumbnail || 'https://via.placeholder.com/300x225?text=No+Preview';
-            img.alt = `${template.name} Preview`;
-            img.onerror = function() {
-                this.src = 'https://via.placeholder.com/300x225?text=No+Preview';
-            };
-            
-            // Create info container
             const infoDiv = document.createElement('div');
             infoDiv.className = 'template-info';
             
@@ -85,6 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const categorySpan = document.createElement('span');
             categorySpan.className = `template-category category-${template.category}`;
             categorySpan.textContent = template.category.charAt(0).toUpperCase() + template.category.slice(1);
+            
+            // Try to load the fallback thumbnail first, then fall back to the placeholder
+            loadImage(template.fallbackThumbnail || template.thumbnail, template.thumbnail || 'https://via.placeholder.com/300x225?text=No+Preview');
             
             // Assemble the card
             previewDiv.appendChild(img);
