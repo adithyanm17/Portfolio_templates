@@ -154,16 +154,33 @@
     </footer>
 
     <!-- Load Feather Icons with fallback -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script>
         // Initialize Feather Icons with error handling
-        if (typeof feather !== 'undefined') {
-            try {
-                feather.replace({ class: 'feather-icon' });
-            } catch (e) {
-                console.error('Error initializing Feather Icons:', e);
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof feather !== 'undefined') {
+                try {
+                    // Replace all feather icons with proper error handling
+                    feather.replace({
+                        class: 'feather-icon',
+                        'stroke-width': 2
+                    });
+                    
+                    // Handle specific icon replacements
+                    const icons = document.querySelectorAll('[data-feather]');
+                    icons.forEach(icon => {
+                        try {
+                            feather.replace({ 'data-feather': icon.getAttribute('data-feather') });
+                        } catch (e) {
+                            console.warn(`Could not load icon: ${icon.getAttribute('data-feather')}`, e);
+                            icon.style.display = 'none';
+                        }
+                    });
+                } catch (e) {
+                    console.error('Error initializing Feather Icons:', e);
+                }
             }
-        }
+        }); // Added missing closing brace and parenthesis
     </script>
 
     <script src="js/script.js"></script>

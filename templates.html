@@ -248,19 +248,50 @@
             
             // Open modal with template preview
             function openModal(template) {
-                modal.style.display = 'block';
-                templateFrame.src = template.path;
-                viewLiveBtn.href = template.path;
-                downloadBtn.setAttribute('data-template-path', template.path);
-                downloadBtn.setAttribute('data-template-name', template.name);
-                document.body.style.overflow = 'hidden';
+                if (!modal || !template || !template.path) {
+                    console.error('Modal element or template data is missing');
+                    return;
+                }
+                
+                try {
+                    modal.style.display = 'block';
+                    
+                    // Safely set template frame source
+                    if (templateFrame) {
+                        templateFrame.src = template.path;
+                    }
+                    
+                    // Safely set view live button href
+                    if (viewLiveBtn) {
+                        viewLiveBtn.href = template.path;
+                    }
+                    
+                    // Safely set download button attributes
+                    if (downloadBtn) {
+                        downloadBtn.setAttribute('data-template-path', template.path);
+                        downloadBtn.setAttribute('data-template-name', template.name || 'template');
+                    }
+                    
+                    document.body.style.overflow = 'hidden';
+                } catch (e) {
+                    console.error('Error opening modal:', e);
+                    if (modal) modal.style.display = 'none';
+                }
             }
             
             // Close modal
             function closeModal() {
-                modal.style.display = 'none';
-                templateFrame.src = '';
-                document.body.style.overflow = '';
+                try {
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                    if (templateFrame) {
+                        templateFrame.src = '';
+                    }
+                    document.body.style.overflow = '';
+                } catch (e) {
+                    console.error('Error closing modal:', e);
+                }
             }
             
             // Event listeners
