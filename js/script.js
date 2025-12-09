@@ -154,29 +154,38 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'auto';
     }
     
-    // Event listeners
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Update filter and display templates
-            currentFilter = button.dataset.filter;
-            displayTemplates();
+    // Event listeners for filter buttons
+    if (filterButtons && filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update filter and display templates
+                currentFilter = button.dataset.filter;
+                displayTemplates();
+            });
         });
-    });
+    }
     
     // Close modal when clicking the close button
-    closeBtn.addEventListener('click', closeModal);
-    closePreviewBtn.addEventListener('click', closeModal);
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    
+    if (closePreviewBtn) {
+        closePreviewBtn.addEventListener('click', closeModal);
+    }
     
     // Close modal when clicking outside the modal content
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+    if (modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
     
     // Function to create and trigger download
     function downloadTemplate(templatePath, templateName) {
